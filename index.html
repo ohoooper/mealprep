@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Prep Station">
+<meta name="theme-color" content="#F3F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1012" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEV0lEQVR42u2dy23sMBAEtQOFYMCAzxvGBuFQHYTDcDDv+g6GsdKSYndP1dkfzqg0pCiSur29f2wAv1GkAJADkAOQA5ADkAOQA5ADkAOQA5ADADkAOQA5ADkAOQA5ADkAOQA5ADkAkAOQA5ADkAOQA5ADtNnbRv798/n8Dz/uXw1TdGuykfqQCuiSL8dwIbqJEijHZU7EW5Ijx0InUi1JkENKiyRFvOWQ1SJDEVc5LLRwV8RPDjstfBUpzKD99pXDXQvHElKYQUSulSNPC6MSIi3HVDMOXRWdliCH+quyJq/xFOUYm/qpeTdqaoIco9J9caJNm+0kx5AUL8yve/t15Xg9syJpjQlERY4XEyo4oAuISEKOV/IoPtVoHVqRvk11jmv5BODOxOI1TXWc6i3HsuG4NuJcm9cqVZiBH3ID0hMxx6ztdom9GGQQi5YcR2+dvF1DRyNa0rkUZuCHa7eSvSVVPLpiZReLCyXkoEPx6lyKkkuk6+XgsBSLBa0c+wRKclA2HItH0QET+0o5eHw1zerOrfNHlq9vz+P+pXMv7T3LxpOt+v/HNJepTm1VdSsb3z+f53w9/Yu+I4+dTvrEH2kyai6R6zE73WNv+tkl5PlsTG3JTsGghEiPOealePYtPu/vK2hXwc8p1zQgOMyiN2GWT1eOGfXz+qs14z+yHRL6VY6FlXbVv84LucL6lLXdf9hZYXQr0EMOhaeGpCcXKgc0kEPnlo0pHrUwO51XBA4fk84wkm4FkAPayqHWzWcMO6gcgByAHIAcgByAHIAcgByAHBuHF2zhr42oHIAcICLHwrfMW9cNODM6suLMJAYcdCvQWw6FWzZpeRuVA7K+8SZ744bt0aq86rrqX+eFTLcCoR8dljo/NG8hanFUNE8oC+RYnrJrGhAcZmUv5J995XyPuts4anLep+Q77OWsrcFhq8Ovpc6RulNbsnfbkfyiha02f1e3LYSP+9e5C3z6F323Uu6tPiDyawGQ+t6KVBnbW31ARN8AqRupmCNils9mhrTz2kG12KvzR3V9zbimGPNWFgTkoHjYfZS56ICJVEKOo8p38ONojFc++hWLs3l8dR2QZhcP8ehKX/9UP5Q7lJWVAz/0zXCa50jywyWW29v7h1eOrIe0XiGX3djbt4TY3QyW33hz9MOxTO7Wd6FFF+Nb6rw/Oqyf91dauFz9lQPSgZdZsIQERKQix5AyIKJITCBCcozqJhZm1r390nIMHEZcnGLTZpvJMXyYOTXdRk0NkUP/RKgmO2915Zj9pKqzbFF2tkZajg6LwZTn8dTlCFZEf3q3yCMReVeOpBJiJHqRWdofUjl8S4ij1q5yGCniW+285RBXxL0TTJBDUJGMx6scORQsCXvkDpTjektS93gmy9HwVRlyJB+JgRywMUMKyAHIAcgBgByAHIAcgByAHIAcgByAHIAcgByAHKQAkAOQA5ADkAOQA5ADkAOQA5ADkAMAOeBp/gGRZgJNrmrYQAAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEV0lEQVR42u2dy23sMBAEtQOFYMCAzxvGBuFQHYTDcDDv+g6GsdKSYndP1dkfzqg0pCiSur29f2wAv1GkAJADkAOQA5ADkAOQA5ADkAOQA5ADADkAOQA5ADkAOQA5ADkAOQA5ADkAkAOQA5ADkAOQA5ADtNnbRv798/n8Dz/uXw1TdGuykfqQCuiSL8dwIbqJEijHZU7EW5Ijx0InUi1JkENKiyRFvOWQ1SJDEVc5LLRwV8RPDjstfBUpzKD99pXDXQvHElKYQUSulSNPC6MSIi3HVDMOXRWdliCH+quyJq/xFOUYm/qpeTdqaoIco9J9caJNm+0kx5AUL8yve/t15Xg9syJpjQlERY4XEyo4oAuISEKOV/IoPtVoHVqRvk11jmv5BODOxOI1TXWc6i3HsuG4NuJcm9cqVZiBH3ID0hMxx6ztdom9GGQQi5YcR2+dvF1DRyNa0rkUZuCHa7eSvSVVPLpiZReLCyXkoEPx6lyKkkuk6+XgsBSLBa0c+wRKclA2HItH0QET+0o5eHw1zerOrfNHlq9vz+P+pXMv7T3LxpOt+v/HNJepTm1VdSsb3z+f53w9/Yu+I4+dTvrEH2kyai6R6zE73WNv+tkl5PlsTG3JTsGghEiPOealePYtPu/vK2hXwc8p1zQgOMyiN2GWT1eOGfXz+qs14z+yHRL6VY6FlXbVv84LucL6lLXdf9hZYXQr0EMOhaeGpCcXKgc0kEPnlo0pHrUwO51XBA4fk84wkm4FkAPayqHWzWcMO6gcgByAHIAcgByAHIAcgByAHBuHF2zhr42oHIAcICLHwrfMW9cNODM6suLMJAYcdCvQWw6FWzZpeRuVA7K+8SZ744bt0aq86rrqX+eFTLcCoR8dljo/NG8hanFUNE8oC+RYnrJrGhAcZmUv5J995XyPuts4anLep+Q77OWsrcFhq8Ovpc6RulNbsnfbkfyiha02f1e3LYSP+9e5C3z6F323Uu6tPiDyawGQ+t6KVBnbW31ARN8AqRupmCNils9mhrTz2kG12KvzR3V9zbimGPNWFgTkoHjYfZS56ICJVEKOo8p38ONojFc++hWLs3l8dR2QZhcP8ehKX/9UP5Q7lJWVAz/0zXCa50jywyWW29v7h1eOrIe0XiGX3djbt4TY3QyW33hz9MOxTO7Wd6FFF+Nb6rw/Oqyf91dauFz9lQPSgZdZsIQERKQix5AyIKJITCBCcozqJhZm1r390nIMHEZcnGLTZpvJMXyYOTXdRk0NkUP/RKgmO2915Zj9pKqzbFF2tkZajg6LwZTn8dTlCFZEf3q3yCMReVeOpBJiJHqRWdofUjl8S4ij1q5yGCniW+285RBXxL0TTJBDUJGMx6scORQsCXvkDpTjektS93gmy9HwVRlyJB+JgRywMUMKyAHIAcgBgByAHIAcgByAHIAcgByAHIAcgByAHKQAkAOQA5ADkAOQA5ADkAOQA5ADkAMAOeBp/gGRZgJNrmrYQAAAAABJRU5ErkJggg==">
+<title>Prep Station</title>
+<style>
+:root{
+  --bg:#F3F3EF; --surface:#FFFFFF; --surface2:#EAEAE3; --line:#DEDED6;
+  --ink:#14171A; --ink2:#4B5057; --ink3:#5C6169;
+  --acc:#14804A; --acc-ink:#FFFFFF; --acc-text:#0E6B3D; --acc-soft:#DDF3E6; --acc-soft-ink:#0B4F2C;
+  --pop:#D8F36A; --pop-ink:#16200A;
+  --btn:#14171A; --btn-ink:#FFFFFF;
+  --danger:#B3261E; --danger-soft:#FBE4E1; --danger-solid:#C42B1C;
+  --blue-soft:#DCEBFA; --blue-ink:#0F3D6B; --amber-soft:#FCEFC7; --amber-ink:#5E4100; --red-soft:#FBE3DC; --red-ink:#7A1F0E;
+  --swoff:#9EA3AA; --tabbg:rgba(255,255,255,.92);
+  --shadow:0 1px 2px rgba(20,23,26,.06),0 10px 28px rgba(20,23,26,.07);
+  --tab-h:58px; --safe-b:env(safe-area-inset-bottom,0px); --safe-t:env(safe-area-inset-top,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1012; --surface:#181B1F; --surface2:#23272C; --line:#2D3238;
+    --ink:#F3F4F5; --ink2:#C1C6CD; --ink3:#A5ABB3;
+    --acc:#4ADE8B; --acc-ink:#06150C; --acc-text:#4ADE8B; --acc-soft:#16372A; --acc-soft-ink:#9BEFC0;
+    --pop:#D8F36A; --pop-ink:#16200A;
+    --btn:#F3F4F5; --btn-ink:#14171A;
+    --danger:#FF9088; --danger-soft:#3C1B19; --danger-solid:#C42B1C;
+    --blue-soft:#17304A; --blue-ink:#B3D5F7; --amber-soft:#3B2E0A; --amber-ink:#F3D27A; --red-soft:#3C1C15; --red-ink:#F7B8A8;
+    --swoff:#5A6068; --tabbg:rgba(24,27,31,.92);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg);color:var(--ink)}
+html.locked,html.locked body{overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overscroll-behavior-y:none}
+button,input,textarea{font:inherit;color:var(--ink);background:transparent;border:0;margin:0;padding:0;border-radius:0}
+button{cursor:pointer;text-align:inherit;-webkit-appearance:none;appearance:none}
+a{color:var(--acc-text);font-weight:600}
+h1,h2,h3,h4,p{color:var(--ink)}
+
+/* ---------- views ---------- */
+.view{display:none;padding:0 16px calc(var(--tab-h) + var(--safe-b) + 96px);max-width:760px;margin:0 auto;background:var(--bg);color:var(--ink)}
+.view.on{display:block}
+.hd{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:calc(var(--safe-t) + 18px) 0 12px;background:var(--bg)}
+.hd h1{margin:0;font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-.9px;color:var(--ink)}
+.hd p{margin:6px 0 0;font-size:15px;color:var(--ink2)}
+.iconbtn{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 15px;border-radius:999px;background:var(--surface);color:var(--ink);font-weight:650;font-size:14px;box-shadow:inset 0 0 0 1px var(--line);flex:none}
+.iconbtn.round{width:42px;padding:0;justify-content:center}
+
+/* ---------- search + chips ---------- */
+.searchbar{position:sticky;top:0;z-index:6;background:var(--bg);margin:0 -16px;padding:6px 16px 10px}
+.sbox{display:flex;align-items:center;gap:10px;background:var(--surface);color:var(--ink3);border-radius:15px;padding:0 14px;min-height:50px;box-shadow:inset 0 0 0 1px var(--line)}
+.sbox input{flex:1;min-width:0;height:50px;font-size:16px;color:var(--ink);background:transparent;outline:none;-webkit-appearance:none}
+.sbox input::placeholder{color:var(--ink3);opacity:1}
+.sbox input::-webkit-search-cancel-button{-webkit-appearance:none}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -16px;padding:2px 16px 14px;scrollbar-width:none;background:var(--bg)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:var(--surface);color:var(--ink);font-weight:650;font-size:14px;box-shadow:inset 0 0 0 1px var(--line)}
+.chip.on{background:var(--btn);color:var(--btn-ink);box-shadow:none}
+
+/* ---------- recipe cards ---------- */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr))}
+.card{background:var(--surface);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s}
+.card:active{transform:scale(.985)}
+.media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface2)}
+.media.hero{border-radius:24px;aspect-ratio:16/11;margin:14px 0 14px}
+.cover{position:absolute;inset:0}
+.cover i,.cover u{position:absolute;border-radius:50%;display:block;text-decoration:none}
+.cover i{width:74%;aspect-ratio:1;right:-14%;top:-22%;background:rgba(255,255,255,.26)}
+.cover u{width:46%;aspect-ratio:1;left:-8%;bottom:-24%;background:rgba(255,255,255,.2)}
+.c-chicken{background:linear-gradient(140deg,#F4C26B,#E0833A)}
+.c-beef{background:linear-gradient(140deg,#E8917D,#B2483A)}
+.c-fish{background:linear-gradient(140deg,#8FCDE2,#3E8DB4)}
+.c-veg{background:linear-gradient(140deg,#AAD88C,#4C9856)}
+.c-pasta{background:linear-gradient(140deg,#F2D88A,#D49837)}
+.media img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;background:var(--surface2)}
+.media img.ph.in{opacity:1}
+.tag{position:absolute;left:12px;top:12px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.2px}
+.t-blue{background:var(--blue-soft);color:var(--blue-ink)}
+.t-amber{background:var(--amber-soft);color:var(--amber-ink)}
+.t-red{background:var(--red-soft);color:var(--red-ink)}
+.watch{position:absolute;right:12px;top:12px;display:inline-flex;align-items:center;gap:6px;padding:6px 12px 6px 10px;border-radius:999px;background:#14171A;color:#FFFFFF;font-size:12px;font-weight:700;min-height:30px}
+.pchip{position:absolute;left:12px;bottom:12px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#14171A;color:#FFFFFF}
+.pchip.hi{background:var(--pop);color:var(--pop-ink)}
+.fab{position:absolute;right:12px;bottom:12px;width:48px;height:48px;border-radius:50%;background:var(--surface);color:var(--ink);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+.fab.on{background:var(--acc);color:var(--acc-ink)}
+.cb{padding:14px 18px 18px;background:var(--surface);color:var(--ink)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--ink2)}
+.cb h3{margin:4px 0 8px;font-size:21px;line-height:1.2;font-weight:760;letter-spacing:-.3px;color:var(--ink)}
+.stats{font-size:14px;color:var(--ink2)}
+.stats b{color:var(--ink);font-weight:700}
+
+/* ---------- generic ---------- */
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:0 18px;border-radius:16px;font-weight:680;font-size:16px;background:var(--btn);color:var(--btn-ink);text-align:center}
+.btn.acc{background:var(--acc);color:var(--acc-ink)}
+.btn.soft{background:var(--surface2);color:var(--ink)}
+.btn.danger{background:var(--danger-soft);color:var(--danger)}
+.btn.sm{min-height:44px;font-size:14px;width:auto;padding:0 16px}
+.btn:active,.iconbtn:active,.chip:active{transform:scale(.97)}
+.stack{display:flex;flex-direction:column;gap:10px}
+.row2{display:flex;gap:10px;flex-wrap:wrap}
+.edit{background:var(--bg);color:var(--ink)}
+.edit label{display:block;margin:18px 2px 6px;font-size:13px;font-weight:700;letter-spacing:.3px;color:var(--ink2)}
+.edit input,.edit textarea,.edit select{display:block;width:100%;padding:12px 14px;border-radius:14px;background:var(--surface2);color:var(--ink);font:inherit;font-size:16px;line-height:1.4;outline:none;border:1.5px solid var(--line);-webkit-appearance:none;appearance:none}
+.edit textarea{resize:vertical;min-height:84px}
+.edit input:focus,.edit textarea:focus,.edit select:focus{border-color:var(--acc)}
+.edit .mono{font-family:ui-monospace,Menlo,monospace}
+.edit .hint{margin:6px 2px 0;font-size:13px;color:var(--ink2)}
+.edit .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.edit .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.edit .btns{margin-top:26px}
+.sh{margin:28px 0 10px;font-size:13px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--ink2)}
+.empty{text-align:center;padding:56px 24px;color:var(--ink2);background:var(--bg)}
+.empty h3{margin:0 0 8px;color:var(--ink);font-size:21px}
+.empty p{margin:0;color:var(--ink2)}
+.empty .btn{margin:20px auto 0;width:auto;display:inline-flex}
+.stepper{display:inline-flex;align-items:center;background:var(--surface2);color:var(--ink);border-radius:14px}
+.stepper button{width:44px;height:44px;display:grid;place-items:center;font-size:22px;font-weight:600;color:var(--ink);background:transparent}
+.stepper span{min-width:30px;text-align:center;font-weight:750;font-variant-numeric:tabular-nums;color:var(--ink)}
+.sw{position:relative;display:block;width:48px;height:29px;border-radius:15px;background:var(--swoff);flex:none;transition:background .2s}
+.sw::after{content:'';position:absolute;top:3px;left:3px;width:23px;height:23px;border-radius:50%;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s}
+.sw.on{background:var(--acc)}
+.sw.on::after{transform:translateX(19px)}
+.link{color:var(--ink2);font-size:13px;font-weight:650;padding:10px 6px;text-decoration:underline;background:transparent}
+
+/* ---------- plan ---------- */
+.day{background:var(--surface);color:var(--ink);border-radius:22px;margin-bottom:14px;box-shadow:var(--shadow);overflow:hidden}
+.day-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px 6px}
+.day-h b{font-size:18px;font-weight:750;color:var(--ink)}
+.today{margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--pop);color:var(--pop-ink);font-size:11px;font-weight:750;letter-spacing:.4px;text-transform:uppercase;vertical-align:2px}
+.day-t{font-size:13px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.slot{padding:4px 10px 8px;background:var(--surface);color:var(--ink)}
+.slot+.slot{border-top:1px solid var(--line)}
+.slot-main{display:flex;align-items:center;gap:12px;width:100%;padding:8px 8px;border-radius:16px;min-height:68px;color:var(--ink);background:transparent}
+.slot-main:active{background:var(--surface2)}
+.slot-tag{width:50px;flex:none;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ink2)}
+.thumb{position:relative;width:54px;height:54px;border-radius:15px;overflow:hidden;flex:none;background:var(--surface2)}
+.thumb.empty{background:transparent;box-shadow:inset 0 0 0 2px var(--line);display:grid;place-items:center;color:var(--ink3)}
+.thumb img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.thumb img.ph.in{opacity:1}
+.slot-txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.slot-txt b{font-weight:680;line-height:1.25;color:var(--ink)}
+.slot-txt small{font-size:13px;color:var(--ink2)}
+.slot-empty{flex:1;color:var(--ink2);font-weight:600}
+.chev{color:var(--ink3);flex:none}
+.slot-sub{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 8px 4px 10px}
+.wf{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--ink);font-size:14px;font-weight:650;background:transparent;white-space:nowrap}
+.wf em{font-style:normal;color:var(--ink2);font-weight:550;white-space:nowrap}
+
+/* ---------- week ---------- */
+.sum{background:var(--surface);color:var(--ink);border-radius:22px;padding:18px;box-shadow:var(--shadow)}
+.sum h3{margin:0;font-size:18px;color:var(--ink)}
+.sum p{margin:4px 0 14px;font-size:14px;color:var(--ink2)}
+.mt{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mt div{background:var(--surface2);color:var(--ink);border-radius:14px;padding:11px 4px;text-align:center}
+.mt b{display:block;font-size:20px;font-weight:800;letter-spacing:-.3px;color:var(--ink);font-variant-numeric:tabular-nums}
+.mt span{display:block;font-size:11px;font-weight:650;letter-spacing:.5px;text-transform:uppercase;color:var(--ink2)}
+.wk{display:grid;grid-template-columns:62px 1fr;gap:10px 14px;align-items:center;background:var(--surface);color:var(--ink);border-radius:22px;padding:14px;margin-top:10px;box-shadow:var(--shadow)}
+.wk .thumb{width:62px;height:62px;border-radius:16px}
+.wk-i{flex:1;min-width:0;cursor:pointer}
+.wk-i b{display:block;font-weight:700;line-height:1.25;color:var(--ink)}
+.wk-i small{display:block;font-size:13px;color:var(--ink2);margin-top:2px}
+.wk-i .need{color:var(--acc-text);font-weight:650}
+.match{margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--acc);color:var(--acc-ink);font-size:12px;font-weight:700;min-height:26px}
+.wk-r{grid-column:1/-1;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+.prep{background:var(--surface);color:var(--ink);border-radius:22px;padding:4px 18px;box-shadow:var(--shadow);margin:14px 0 4px}
+.prep summary{list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:58px;font-weight:720;font-size:17px;cursor:pointer;color:var(--ink)}
+.prep summary::-webkit-details-marker{display:none}
+.prep summary svg{transition:transform .2s;color:var(--ink2)}
+.prep[open] summary svg{transform:rotate(180deg)}
+.pstep{display:flex;gap:12px;padding:8px 0 12px;color:var(--ink);font-size:15px}
+.pstep i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:750}
+
+/* ---------- shop ---------- */
+.prog{background:var(--surface);color:var(--ink);border-radius:22px;padding:18px;box-shadow:var(--shadow)}
+.prog-t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;color:var(--ink)}
+.prog-t b{font-size:22px;font-weight:800;letter-spacing:-.4px}
+.prog-t span{font-size:14px;color:var(--ink2)}
+.bar{height:10px;border-radius:5px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc);border-radius:5px;transition:width .3s}
+.addrow{display:flex;gap:10px;margin:14px 0 2px}
+.addrow input{flex:1;min-width:0;min-height:52px;border-radius:16px;padding:0 16px;background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);outline:none;font-size:16px}
+.addrow input::placeholder{color:var(--ink3);opacity:1}
+.addrow .btn{width:auto;min-width:84px}
+.aisle{display:flex;justify-content:space-between;align-items:baseline;margin:24px 6px 8px;font-size:13px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--ink2)}
+.list{background:var(--surface);color:var(--ink);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.item{display:flex;align-items:center;gap:13px;padding:12px 4px 12px 16px;min-height:58px;color:var(--ink);cursor:pointer;background:var(--surface)}
+.item+.item{border-top:1px solid var(--line)}
+.item:active{background:var(--surface2)}
+.tick{width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--ink3);flex:none;display:grid;place-items:center;color:var(--acc-ink);background:transparent}
+.tick.on{background:var(--acc);box-shadow:none}
+.it-main{flex:1;min-width:0}
+.it-name{display:block;font-weight:640;color:var(--ink)}
+.it-for{display:block;font-size:12.5px;line-height:1.3;color:var(--ink2);margin-top:2px}
+.it-q{font-variant-numeric:tabular-nums;font-weight:720;white-space:nowrap;color:var(--ink);font-size:15px}
+.it-more{width:44px;height:48px;display:grid;place-items:center;color:var(--ink2);flex:none;background:transparent}
+.item.done .it-name{text-decoration:line-through;color:var(--ink3)}
+.item.done .it-q,.item.done .it-for{color:var(--ink3)}
+.fold{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 18px;border-radius:20px;background:var(--surface);color:var(--ink);font-weight:700;box-shadow:var(--shadow);margin-top:20px}
+.fold small{color:var(--ink2);font-weight:550;font-size:14px}
+.hint{font-size:13px;color:var(--ink2);margin:18px 6px 0;line-height:1.5}
+
+/* ---------- guide ---------- */
+.gcard{background:var(--surface);color:var(--ink);border-radius:22px;padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.gcard h4{margin:0 0 10px;font-size:18px;color:var(--ink)}
+.gcard p{margin:0 0 10px;color:var(--ink);font-size:15px}
+.grow{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
+.grow b{font-weight:720;text-align:right;color:var(--ink);white-space:nowrap;flex:none}
+.src{font-size:13px;color:var(--ink2)}
+.credits{margin:0;padding:0;list-style:none;font-size:14px;color:var(--ink)}
+.credits li{padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+/* ---------- sheet (detail + picker) ---------- */
+.sheet{position:fixed;inset:0;z-index:60;background:var(--bg);color:var(--ink);overflow-y:auto;-webkit-overflow-scrolling:touch;transform:translateY(100%);visibility:hidden;transition:transform .34s cubic-bezier(.32,.72,0,1),visibility 0s .34s}
+.sheet.open{transform:none;visibility:visible;transition-delay:0s}
+.sh-top{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:12px;padding:calc(var(--safe-t) + 10px) 16px 10px;background:var(--bg);color:var(--ink);border-bottom:1px solid var(--line)}
+.sh-top .x{width:42px;height:42px;border-radius:50%;background:var(--surface2);color:var(--ink);display:grid;place-items:center;flex:none}
+.sh-top h2{margin:0;font-size:17px;font-weight:720;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.sh-in{max-width:680px;margin:0 auto;padding:0 16px calc(var(--safe-b) + 48px);background:var(--bg);color:var(--ink)}
+.credit{font-size:12.5px;color:var(--ink2);margin:-4px 2px 14px}
+.cap{font-size:13.5px;color:var(--ink2);margin:-4px 2px 14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.mchip{padding:7px 13px;border-radius:999px;background:var(--surface2);color:var(--ink);font-size:13px;font-weight:650}
+.pc{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--surface);color:var(--ink);border-radius:20px;padding:12px 12px 12px 18px;margin-bottom:10px;box-shadow:var(--shadow)}
+.pc b{display:block;font-size:16px;color:var(--ink)}
+.pc small{color:var(--ink2);font-size:13px}
+.ig{font-size:13px;font-weight:700;color:var(--acc-text);margin:18px 0 2px;letter-spacing:.3px}
+.ing{display:flex;gap:14px;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.ing .n{color:var(--ink)}
+.ing .alt{display:block;font-size:13px;color:var(--ink2);margin-top:1px}
+.ing .q{font-variant-numeric:tabular-nums;font-weight:720;white-space:nowrap;color:var(--ink)}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;display:flex;gap:14px;padding:11px 0;color:var(--ink);line-height:1.5}
+.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:var(--btn-ink);display:grid;place-items:center;font-size:13px;font-weight:750}
+.note{background:var(--acc-soft);color:var(--acc-soft-ink);padding:15px 17px;border-radius:18px;font-size:15px;line-height:1.5}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.st div{background:var(--surface);color:var(--ink);border-radius:16px;padding:13px 10px;text-align:center;box-shadow:var(--shadow)}
+.st span{display:block;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ink2)}
+.st b{display:block;margin-top:4px;font-size:15px;color:var(--ink)}
+.tips{margin:0;padding:0 0 0 20px;color:var(--ink)}
+.tips li{margin:0 0 8px;line-height:1.5;color:var(--ink)}
+.prow{display:flex;align-items:center;gap:14px;width:100%;padding:11px 8px;border-radius:16px;min-height:72px;background:var(--surface);color:var(--ink);margin-bottom:8px;box-shadow:var(--shadow)}
+.prow .thumb{width:56px;height:56px}
+.prow b{display:block;font-weight:680;line-height:1.25;color:var(--ink)}
+.prow small{display:block;font-size:13px;color:var(--ink2)}
+.prow .ok{color:var(--acc-text);flex:none}
+.psearch{margin:14px 0 6px}
+.vposter{display:flex;align-items:center;gap:16px;width:100%;min-height:92px;padding:0 20px;border-radius:22px;background:#14171A;color:#FFFFFF;text-align:left;font-weight:700;font-size:16px}
+.vposter .vp{flex:none;width:52px;height:52px;border-radius:50%;background:#D8F36A;color:#16200A;display:grid;place-items:center}
+.vposter small{display:block;font-weight:500;font-size:13px;color:#C9CDD2;margin-top:2px}
+.embed{border-radius:22px;overflow:hidden;background:#FFFFFF;box-shadow:var(--shadow)}
+.embed iframe{display:block;width:100%;height:740px;border:0;background:#FFFFFF}
+
+/* ---------- dialog ---------- */
+#scrim{position:fixed;inset:0;z-index:75;background:rgba(10,12,14,.55);opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
+#scrim.on{opacity:1;visibility:visible;transition-delay:0s}
+.dialog{position:fixed;left:0;right:0;bottom:0;z-index:80;max-width:640px;margin:0 auto;background:var(--surface);color:var(--ink);border-radius:28px 28px 0 0;padding:10px 18px calc(var(--safe-b) + 18px);transform:translateY(105%);visibility:hidden;transition:transform .3s cubic-bezier(.32,.72,0,1),visibility 0s .3s;box-shadow:0 -12px 44px rgba(0,0,0,.28)}
+.dialog.open{transform:none;visibility:visible;transition-delay:0s}
+.grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.dialog h3{margin:4px 0 6px;font-size:21px;font-weight:760;color:var(--ink)}
+.dialog p{margin:0 0 16px;color:var(--ink2);font-size:15px;line-height:1.5}
+.dialog textarea{width:100%;min-height:150px;border-radius:14px;padding:12px;background:var(--surface2);color:var(--ink);font-size:13px;font-family:ui-monospace,Menlo,monospace;margin-bottom:12px;outline:none;resize:vertical}
+
+/* ---------- toast, pill, tabs ---------- */
+#toast{position:fixed;left:16px;right:16px;bottom:calc(var(--tab-h) + var(--safe-b) + 14px);z-index:70;display:flex;justify-content:center;pointer-events:none}
+#toast .t{pointer-events:auto;display:flex;align-items:center;gap:16px;background:#1B1F23;color:#F3F4F5;padding:12px 14px 12px 18px;border-radius:18px;box-shadow:0 10px 32px rgba(0,0,0,.4);font-size:15px;font-weight:560;max-width:560px;transform:translateY(24px);opacity:0;transition:transform .25s,opacity .25s}
+#toast .t.on{transform:none;opacity:1}
+#toast .t button{color:#D8F36A;font-weight:760;padding:6px 6px;min-height:40px;background:transparent}
+body.has-pill #toast{bottom:calc(var(--tab-h) + var(--safe-b) + 80px)}
+#pill{position:fixed;left:16px;right:16px;bottom:calc(var(--tab-h) + var(--safe-b) + 14px);z-index:35;display:none;justify-content:center}
+#pill.on{display:flex}
+#pill button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;max-width:560px;min-height:56px;padding:0 8px 0 22px;border-radius:999px;background:#1B1F23;color:#F3F4F5;box-shadow:0 10px 30px rgba(0,0,0,.32);font-weight:660}
+#pill .go{display:grid;place-items:center;min-height:42px;padding:0 18px;border-radius:999px;background:#D8F36A;color:#16200A;font-weight:760;font-size:14px}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;height:calc(var(--tab-h) + var(--safe-b));padding-bottom:var(--safe-b);background:var(--tabbg);border-top:1px solid var(--line);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px)}
+.tab{position:relative;flex:1;max-width:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;font-weight:650;color:var(--ink3);background:transparent}
+.tab.on{color:var(--acc-text)}
+.tbadge{position:absolute;top:5px;left:calc(50% + 6px);min-width:19px;height:19px;padding:0 5px;border-radius:10px;background:var(--danger-solid);color:#FFFFFF;font-size:11px;font-weight:750;display:grid;place-items:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main id="main">
+  <section class="view on" id="v-browse">
+    <header class="hd"><div><h1>Recipes</h1><p id="count"></p></div>
+      <button class="iconbtn" data-act="sortMenu" id="sortBtn">Sort</button></header>
+    <div class="searchbar"><label class="sbox"><span id="siIcon"></span><input id="q" type="search" placeholder="Search recipes or ingredients" autocomplete="off" autocorrect="off" enterkeyhint="search" aria-label="Search recipes"></label></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+  <section class="view" id="v-plan"></section>
+  <section class="view" id="v-week"></section>
+  <section class="view" id="v-shop"></section>
+  <section class="view" id="v-guide"></section>
+</main>
+
+<div id="pill"></div>
+<div id="toast"></div>
+<div id="scrim" data-act="closeDialog"></div>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shTitle" aria-hidden="true">
+  <div class="sh-top"><button class="x" data-act="closeSheet" aria-label="Close" id="shX"></button><h2 id="shTitle"></h2></div>
+  <div class="sh-in" id="shBody"></div>
+</div>
+
+<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-hidden="true"><div class="grab"></div><div id="dlgBody"></div></div>
+
+<nav class="tabbar" id="tabbar" aria-label="Main"></nav>
+<input type="file" id="photoIn" accept="image/*" hidden>
+
+<script>
+(function(){
+'use strict';
+var RECIPES=[{"id":"honey-garlic-fried-rice","name":"Crispy Honey Garlic Chicken Fried Rice","cat":"Chicken","serves":6,"freezer":true,"prep":"45 min","blurb":"The big-batch workhorse. Sheet-pan chicken, one-tray veg + rice, sauce kept separate.","improved":false,"macros":{"kcal":850,"protein":54,"carbs":74,"fat":36},"ingredients":[{"name":"Boneless chicken thighs","unit":"g","qty":1300,"section":"Honey garlic chicken","alt":null},{"name":"Black pepper","unit":"tsp","qty":2.5,"section":"Honey garlic chicken","alt":null},{"name":"Garlic granules","unit":"tsp","qty":4,"section":"Honey garlic chicken","alt":null},{"name":"Onion powder","unit":"tsp","qty":3,"section":"Honey garlic chicken","alt":null},{"name":"Chilli flakes","unit":"tsp","qty":2,"section":"Honey garlic chicken","alt":null},{"name":"Olive oil","unit":"tsp","qty":6,"section":"Honey garlic chicken","alt":null},{"name":"Honey","unit":"g","qty":50,"section":"Honey garlic chicken","alt":null},{"name":"Light soy sauce","unit":"g","qty":30,"section":"Honey garlic chicken","alt":null},{"name":"Dark soy sauce","unit":"g","qty":25,"section":"Honey garlic chicken","alt":null},{"name":"Low-fat yogurt","unit":"g","qty":300,"section":"Creamy sriracha sauce (keep separate)","alt":null},{"name":"Light mayo","unit":"g","qty":120,"section":"Creamy sriracha sauce (keep separate)","alt":null},{"name":"Sriracha","unit":"g","qty":50,"section":"Creamy sriracha sauce (keep separate)","alt":null},{"name":"Honey","unit":"g","qty":25,"section":"Creamy sriracha sauce (keep separate)","alt":null},{"name":"Smoked paprika","unit":"tsp","qty":1.5,"section":"Creamy sriracha sauce (keep separate)","alt":null},{"name":"Frozen mixed veg (carrot, sweetcorn, green bean, pea)","unit":"g","qty":475,"section":"Toasted sesame fried rice","alt":null},{"name":"Spring onion, white part","unit":"g","qty":100,"section":"Toasted sesame fried rice","alt":"'Green onion' = spring onion"},{"name":"Sesame seeds","unit":"g","qty":40,"section":"Toasted sesame fried rice","alt":null},{"name":"White rice, uncooked","unit":"g","qty":375,"section":"Toasted sesame fried rice","alt":"~750g cooked"},{"name":"Light soy sauce","unit":"g","qty":40,"section":"Toasted sesame fried rice","alt":null},{"name":"Spring onion, green part","unit":"g","qty":50,"section":"Toasted sesame fried rice","alt":null},{"name":"Light butter","unit":"g","qty":20,"section":"Toasted sesame fried rice","alt":null}],"steps":["Cube the thighs and trim excess fat. Toss with the pepper, garlic granules, onion powder, chilli flakes, oil, honey and both soy sauces. Set aside.","Mix all the sauce ingredients until smooth. Bottle and refrigerate - it keeps the week.","Spread the chicken on a large lined tray, mist with oil and bake 20 min at 190C fan until golden and crisp at the edges.","Lift the chicken off, leaving the juices. Add the frozen veg, spring onion whites and sesame seeds to the tray, toss in the juices, spread flat and roast 15 min.","Add the cooked rice, soy, spring onion greens and light butter. Fold gently until glossy and fluffy. Return the chicken, mix, serve with the sauce."],"weighing":"Batch makes ~6 portions. Weigh cooked: aim ~125g cooked rice + ~215g cooked chicken per box. Easiest method: after cooking, weigh the total rice+veg+chicken mass, divide by 6, and portion by weight rather than by eye - the chicken shrinks ~25% on cooking so eyeballing over-serves the first two boxes.","tips":["Sauce has raw yogurt/mayo - always store it separate from the hot components or it splits on reheat.","Cook the rice the day before and chill it: cold rice fries far better and drier."]},{"id":"creamy-mushroom-pasta","name":"Creamy Mushroom Pasta","cat":"Veg / pasta","serves":4,"freezer":false,"prep":"30 min","blurb":"Cream sauce doesn't freeze well - make fresh, but a 4-portion batch keeps 2 days in the fridge.","improved":false,"macros":{"kcal":960,"protein":25,"carbs":84,"fat":55},"ingredients":[{"name":"Rigatoni","unit":"g","qty":450,"section":"","alt":null},{"name":"Shallots, chopped","unit":"","qty":4,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":4,"section":"","alt":null},{"name":"Mixed mushrooms (chestnut, portobello, shiitake), sliced","unit":"g","qty":500,"section":"","alt":null},{"name":"Unsalted butter","unit":"g","qty":50,"section":"","alt":null},{"name":"Garlic, minced","unit":"cloves","qty":3,"section":"","alt":null},{"name":"Double cream","unit":"ml","qty":200,"section":"","alt":"Swap: creme fraiche, or evaporated milk for lighter"},{"name":"Parmesan, grated","unit":"g","qty":70,"section":"","alt":null},{"name":"Basil","unit":"","qty":1,"section":"","alt":null},{"name":"Onion powder","unit":"tsp","qty":0.5,"section":"","alt":"stirred into the cream"},{"name":"Dried oregano","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Dried thyme","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Smoked paprika","unit":"tsp","qty":0.5,"section":"","alt":null}],"steps":["Boil the rigatoni in well-salted water until al dente. Reserve a mugful of pasta water before draining.","Soften the shallots in the oil over medium heat. Add mushrooms and cook hard until they colour and their water has cooked off - don't crowd the pan.","Add butter and garlic, 1 min. Pour in the cream plus the onion powder, oregano, thyme and paprika. Simmer 2-3 min.","Off the heat stir in the parmesan, then the pasta. Loosen with pasta water to a silky (not sticky) sauce. Finish with torn basil."],"weighing":"4 even portions. Weigh the finished pan and divide by 4. If meal-prepping, slightly undercook the pasta (1 min less) so it survives reheating without going mushy.","tips":["No meat here - to make it a proper post-run recovery meal add 150-200g cooked chicken (thigh or leftover roast) or a tin of drained cannellini beans stirred in at the end for ~15g extra protein per portion.","A squeeze of lemon at the end cuts the richness."]},{"id":"lime-chicken-sandwich","name":"Lime Chicken Sandwich","cat":"Chicken","serves":2,"freezer":"partial","prep":"35 min","blurb":"Original was half-written; I've completed the build and pinned quantities for 2 sandwiches.","improved":true,"macros":{"kcal":715,"protein":48,"carbs":95,"fat":15},"ingredients":[{"name":"Chicken breast (2 x ~150g)","unit":"g","qty":300,"section":"For the chicken","alt":null},{"name":"Plain flour","unit":"g","qty":40,"section":"For the chicken","alt":null},{"name":"Egg, beaten","unit":"","qty":1,"section":"For the chicken","alt":null},{"name":"Corn flakes, crushed","unit":"g","qty":60,"section":"For the chicken","alt":null},{"name":"Avocado oil","unit":"tbsp","qty":1,"section":"Lime dressing","alt":"Swap: any neutral oil"},{"name":"Lime juice","unit":"ml","qty":120,"section":"Lime dressing","alt":null},{"name":"Honey","unit":"tbsp","qty":1,"section":"Lime dressing","alt":null},{"name":"Cumin","unit":"tsp","qty":1,"section":"Lime dressing","alt":null},{"name":"Garlic, chopped","unit":"cloves","qty":3,"section":"Lime dressing","alt":null},{"name":"Water","unit":"ml","qty":120,"section":"Lime dressing","alt":null},{"name":"Coriander, chopped","unit":"g","qty":15,"section":"Lime dressing","alt":"'Cilantro' = coriander"},{"name":"Ciabatta (2 rolls)","unit":"g","qty":180,"section":"To build","alt":null},{"name":"Cucumber, sliced","unit":"","qty":0.5,"section":"To build","alt":null},{"name":"White cabbage, shredded","unit":"g","qty":80,"section":"To build","alt":null},{"name":"Jalapeno, sliced","unit":"","qty":1,"section":"To build","alt":null},{"name":"Lime zest, onion powder, garlic powder","unit":"","qty":1,"section":"To build","alt":"for the slaw"}],"steps":["Dredge the chicken: flour, then beaten egg, then crushed corn flakes. Air-fry 18-20 min at 195C, flipping halfway, until 74C internal.","Simmer the oil, lime juice, honey, cumin, garlic and water in a small pan for 3-4 min into a loose glaze; stir in the coriander.","Toss the cabbage and cucumber with lime zest, onion powder and garlic powder for a quick slaw.","Spoon glaze over the crispy chicken, pile into toasted ciabatta with the slaw and jalapeno."],"weighing":"2 sandwiches. The breaded chicken freezes well raw or cooked; freeze the cooked cutlets flat, reheat from frozen in the air fryer 8-10 min. Assemble fresh - don't freeze built sandwiches.","tips":["Improvement I made: added a proper lime-cabbage slaw and toasting step the original skipped.","165F/74C is the food-safe internal temp for chicken breast - use a probe, breast dries out past 78C."]},{"id":"chicken-shawarma-wrap","name":"Chicken Shawarma Wrap","cat":"Chicken","serves":6,"freezer":"partial","prep":"1 hr + marinate","blurb":"Marinate ahead. Freeze the cooked spiced chicken; build wraps fresh.","improved":false,"macros":{"kcal":640,"protein":33,"carbs":32,"fat":41},"ingredients":[{"name":"Boneless chicken breast or thigh, thin sliced","unit":"g","qty":900,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Garlic, minced","unit":"tbsp","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Mayonnaise","unit":"tbsp","qty":2,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Olive oil","unit":"tbsp","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Smoked paprika","unit":"tbsp","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Garlic powder, cumin, coriander, turmeric, chilli, black pepper","unit":"","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Lemon juice","unit":"tbsp","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Clarified butter/oil to cook","unit":"tbsp","qty":3,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Red onion, thin sliced & washed","unit":"","qty":1,"section":"Sumac onions","alt":null},{"name":"Parsley, chopped","unit":"tbsp","qty":1,"section":"Sumac onions","alt":null},{"name":"Sumac","unit":"tbsp","qty":1,"section":"Sumac onions","alt":"Obscure? Swap: 1 tbsp lemon zest + pinch of salt, or a little lemon juice"},{"name":"Lemon juice","unit":"tsp","qty":1,"section":"Sumac onions","alt":null},{"name":"Mayonnaise","unit":"g","qty":75,"section":"Garlic sauce","alt":null},{"name":"Sour cream","unit":"g","qty":115,"section":"Garlic sauce","alt":null},{"name":"Buttermilk","unit":"tbsp","qty":3,"section":"Garlic sauce","alt":"Swap: milk with a squeeze of lemon"},{"name":"Ketchup","unit":"g","qty":30,"section":"Garlic sauce","alt":null},{"name":"Hot sauce","unit":"g","qty":30,"section":"Garlic sauce","alt":null},{"name":"Garlic powder, smoked paprika","unit":"tbsp","qty":1,"section":"Garlic sauce","alt":null},{"name":"Tortilla wraps","unit":"","qty":6,"section":"To assemble","alt":null},{"name":"Cucumber, chopped","unit":"g","qty":75,"section":"To assemble","alt":null},{"name":"Tomatoes, chopped","unit":"g","qty":75,"section":"To assemble","alt":null},{"name":"Pickled cucumbers","unit":"g","qty":75,"section":"To assemble","alt":null}],"steps":["Season the chicken with salt, pepper, garlic powder, paprika, turmeric and chilli. Add mayo, fresh garlic, oil and lemon. Marinate at least 1 hr (overnight is better).","Whisk all the garlic-sauce ingredients smooth. Refrigerate.","Toss the onions with parsley, sumac, salt and lemon.","Heat clarified butter and cook the chicken in batches, 8-10 min, until charred and cooked through. Rest, then chop.","Build: warm wrap, chicken, sumac onions, cucumber, tomato, pickles, garlic sauce."],"weighing":"6 wraps' worth of filling. Portion the cooked chicken into 6 (~110g cooked each) and freeze. Sauce and onions keep 3-4 days fridge; make wraps to order.","tips":["Skip the 'spiced fries inside' if prepping - they go soggy. Serve chips on the side fresh instead.","Thigh gives juicier shawarma than breast and reheats without drying."]},{"id":"miso-chicken-spinach-rice","name":"Miso Chicken & Spinach Rice","cat":"Chicken","serves":2,"freezer":"partial","prep":"40 min","blurb":"Vivid green spinach rice under sticky grilled miso chicken.","improved":false,"macros":{"kcal":705,"protein":48,"carbs":68,"fat":26},"ingredients":[{"name":"Boneless chicken thighs","unit":"g","qty":400,"section":"","alt":null},{"name":"Red miso","unit":"g","qty":90,"section":"","alt":"Obscure? Swap: white miso, or 2 tbsp soy + 1 tsp tahini"},{"name":"Honey","unit":"g","qty":40,"section":"","alt":null},{"name":"Soy sauce","unit":"g","qty":20,"section":"","alt":null},{"name":"Lemon, juice of","unit":"","qty":0.5,"section":"","alt":null},{"name":"MSG (optional)","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Sushi rice","unit":"g","qty":100,"section":"","alt":"Swap: any short-grain rice"},{"name":"Water","unit":"ml","qty":125,"section":"","alt":null},{"name":"Spinach","unit":"g","qty":50,"section":"","alt":null},{"name":"Garlic","unit":"cloves","qty":1,"section":"","alt":null},{"name":"Butter","unit":"g","qty":10,"section":"","alt":null},{"name":"Egg yolk, chives, lemon wedges","unit":"","qty":1,"section":"","alt":"to finish"}],"steps":["Blitz spinach, butter, water and garlic until vivid green (~1 min).","Rinse the rice until the water runs clear. Cook in the spinach water: boil, cover, low heat 12 min, then steam off the heat 12 min.","Whisk miso, honey, soy, lemon, MSG, salt and pepper. Cut each thigh into 3 strips, coat in the marinade.","Grill on high 6-8 min until charred and cooked through. Serve over the green rice with a yolk and chives."],"weighing":"Serves 2. Rice doubles/triples cleanly - but see the rice storage note: cooked rice is a 1-day-fridge ingredient, so cook rice fresh if prepping beyond 2 boxes and freeze the chicken instead.","tips":["Grilled miso chicken freezes well; the green rice is best fresh.","MSG is genuinely optional - a pinch of salt does most of the job."]},{"id":"scallion-oil-noodles","name":"Spring Onion Oil Noodles with Honey Soy Chicken","cat":"Chicken","serves":2,"freezer":false,"prep":"30 min","blurb":"Renamed from 'scallion' - it's spring onion. Fast, glossy, best eaten fresh.","improved":false,"macros":{"kcal":805,"protein":54,"carbs":68,"fat":34},"ingredients":[{"name":"Spring onions","unit":"","qty":6,"section":"","alt":"was 'scallions'"},{"name":"Avocado oil","unit":"g","qty":30,"section":"","alt":null},{"name":"Light soy","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Dark soy","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Black vinegar","unit":"tbsp","qty":1,"section":"","alt":"Obscure? Swap: balsamic + splash rice vinegar"},{"name":"Honey","unit":"g","qty":30,"section":"","alt":null},{"name":"Frozen ramen/noodles","unit":"g","qty":400,"section":"","alt":null},{"name":"5% chicken mince","unit":"g","qty":400,"section":"","alt":null},{"name":"Garlic","unit":"cloves","qty":1,"section":"","alt":null},{"name":"Shaoxing wine","unit":"tbsp","qty":1,"section":"","alt":"Obscure? Swap: dry sherry, or leave out"},{"name":"Chinese broccoli or choy sum","unit":"g","qty":200,"section":"","alt":"Swap: tenderstem broccoli, pak choi"},{"name":"Egg yolks (optional)","unit":"","qty":2,"section":"","alt":null}],"steps":["Boil salted water. Cut 4 spring onions into 2.5cm pieces, add to a pan with the avocado oil over low-medium heat until charring. Add both soys and honey, simmer 1 min, off the heat add vinegar. Set aside. Finely slice the rest.","Colour the chicken mince in a hot wok. Lower heat, add dark soy, honey and grated garlic, reduce until glossy. Deglaze with Shaoxing, set aside.","Blanch the greens 2 min. Cook the noodles, drain, add to the chicken pan with the sauce and toss - a splash of noodle water loosens it.","Bowl up, top with chicken, greens, sliced spring onion and a yolk."],"weighing":"Serves 2. Dressed noodles go claggy overnight so this is a 'cook-fresh' one; the cooked mince freezes fine on its own if you want a head start.","tips":["Not a meal-prep hero - keep it in the rotation as a fast fresh-cook night.","Egg yolk is optional but makes it silkier."]},{"id":"caramelised-onion-spaghetti","name":"Caramelised Onion & Garlic Spaghetti","cat":"Veg / pasta","serves":2,"freezer":false,"prep":"30 min","blurb":"Jammy onions, chilli crisp, a cheap and moreish store-cupboard dinner.","improved":false,"macros":{"kcal":1320,"protein":27,"carbs":92,"fat":92},"ingredients":[{"name":"Large onion, thin sliced","unit":"","qty":1,"section":"","alt":null},{"name":"Garlic, minced","unit":"cloves","qty":4,"section":"","alt":null},{"name":"Chilli crisp","unit":"tbsp","qty":2,"section":"","alt":"Swap: chilli oil + pinch chilli flakes"},{"name":"Double cream or coconut milk (room temp)","unit":"ml","qty":240,"section":"","alt":null},{"name":"Soy sauce (optional)","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Parmesan, grated","unit":"g","qty":50,"section":"","alt":null},{"name":"Pasta","unit":"g","qty":225,"section":"","alt":null},{"name":"Butter","unit":"g","qty":28,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Paprika, garlic powder, Italian seasoning, salt, pepper","unit":"tsp","qty":1,"section":"","alt":null}],"steps":["Slice the onion thin. Melt butter with the oil over medium; cook the onions 15-20 min, stirring, until golden and jammy. Splash of water if they stick.","Meanwhile boil the pasta in salted water until al dente; save some pasta water.","Stir the garlic and seasonings into the onions, 1 min, then the chilli crisp, 1 min. Add cream, simmer, then the parmesan.","Toss the pasta through, loosening with pasta water to silky. Top with more chilli crisp."],"weighing":"Serves 2 generously. Cream sauces don't reheat brilliantly - fine next-day fridge, not for freezing.","tips":["No protein - crack in 2 eggs carbonara-style off the heat, or add 150g cooked chicken/prawns per person.","Coconut milk works and makes it dairy-free."]},{"id":"smashed-potato-salad","name":"Crispy Smashed Potato & Cucumber Salad","cat":"Side / veg","serves":4,"freezer":false,"prep":"45 min","blurb":"Sesame-mayo, chilli oil, crispy smashed spuds. A side that eats like a main with protein.","improved":false,"macros":{"kcal":465,"protein":8,"carbs":48,"fat":27},"ingredients":[{"name":"Baby potatoes","unit":"g","qty":1000,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Spring onions","unit":"","qty":4,"section":"","alt":null},{"name":"Cucumber","unit":"","qty":1,"section":"","alt":null},{"name":"Coriander","unit":"g","qty":15,"section":"","alt":null},{"name":"Black sesame seeds","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Crispy chilli oil","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Tahini","unit":"tbsp","qty":2,"section":"Sesame mayo dressing","alt":null},{"name":"Toasted sesame oil","unit":"tbsp","qty":1,"section":"Sesame mayo dressing","alt":null},{"name":"White miso","unit":"tbsp","qty":1,"section":"Sesame mayo dressing","alt":"Swap: 1 tsp soy + pinch sugar"},{"name":"Mayo (any)","unit":"g","qty":100,"section":"Sesame mayo dressing","alt":null},{"name":"Lime","unit":"","qty":1,"section":"Sesame mayo dressing","alt":null},{"name":"Water","unit":"tbsp","qty":3,"section":"Sesame mayo dressing","alt":null}],"steps":["Simmer the potatoes until tender, drain and steam-dry, then smash flat and roast or air-fry until crisp.","Whisk the dressing ingredients smooth.","Deseed and half-moon the cucumber, slice spring onions, pick coriander.","Toss the crispy potatoes with the veg and dressing; finish with sesame and chilli oil."],"weighing":"Side for 4, or main for 2. Best fresh - crispy potatoes go soft in the fridge, so if prepping keep components separate and re-crisp the spuds in the air fryer.","tips":["Easy protein to make it a meal: 2 lamb chops per person, or 150g chicken thigh, or a tin of chickpeas roasted alongside the potatoes.","This is the one salad here I'd not batch-prep - crisp potato doesn't survive."]},{"id":"crispy-chicken-tacos","name":"Crispy Chicken Tacos","cat":"Chicken","serves":5,"freezer":"partial","prep":"45 min","blurb":"Cheese-crisped tortillas, spiced chicken, pico and a punchy sauce.","improved":false,"macros":{"kcal":1030,"protein":53,"carbs":61,"fat":62},"ingredients":[{"name":"Boneless chicken thighs, small dice","unit":"g","qty":900,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Smoked paprika, chilli powder, garlic powder, black pepper","unit":"tsp","qty":1,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Garlic, minced","unit":"tbsp","qty":2,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Oil","unit":"tbsp","qty":3,"section":"For the chicken (900g / 2lb)","alt":null},{"name":"Onion, finely chopped & washed","unit":"","qty":1,"section":"Pico de gallo","alt":null},{"name":"Tomato, diced","unit":"","qty":1,"section":"Pico de gallo","alt":null},{"name":"Coriander, chopped","unit":"tbsp","qty":2,"section":"Pico de gallo","alt":null},{"name":"Lime juice","unit":"tbsp","qty":1,"section":"Pico de gallo","alt":null},{"name":"Mayonnaise","unit":"g","qty":110,"section":"Spicy taco sauce","alt":null},{"name":"Sour cream","unit":"g","qty":115,"section":"Spicy taco sauce","alt":null},{"name":"Hot sauce","unit":"tbsp","qty":3,"section":"Spicy taco sauce","alt":null},{"name":"Smoked paprika, garlic powder, lime juice","unit":"tbsp","qty":1,"section":"Spicy taco sauce","alt":null},{"name":"Mini tortillas","unit":"","qty":18,"section":"To assemble","alt":null},{"name":"Mozzarella","unit":"g","qty":220,"section":"To assemble","alt":null},{"name":"Oil for frying","unit":"tbsp","qty":1,"section":"To assemble","alt":null}],"steps":["Mix the chicken with salt, paprika, chilli powder, garlic powder and pepper.","Fry the minced garlic 1 min, add chicken and cook until crisp and cooked through. Set aside.","Combine pico ingredients; chill. Whisk the sauce ingredients, loosen with a little water.","In a pan, lay mozzarella, let it crisp, top with chicken and a tortilla, fold and crisp both sides.","Serve with pico and the spicy sauce."],"weighing":"~5 portions (3-4 tacos each). Freeze the cooked spiced chicken; assemble and cheese-crisp fresh. Sauce and pico keep 3 days fridge.","tips":["Cheese-crisping the tortilla is what makes these - don't skip it.","Wash the diced raw onion under cold water for pico to lose the harsh bite."]},{"id":"sweet-spicy-salmon-bowls","name":"Sweet & Spicy Trout Bowls","cat":"Fish","serves":2,"freezer":false,"prep":"25 min","blurb":"Glazed trout, fresh mango salsa, jasmine rice. Assumes 2 fillets (~130g each).","improved":false,"macros":{"kcal":683,"protein":33,"carbs":86,"fat":24},"ingredients":[{"name":"Trout fillets (2 x ~130g)","unit":"g","qty":260,"section":"For the trout","alt":null},{"name":"Sriracha","unit":"tsp","qty":1,"section":"For the trout","alt":null},{"name":"Maple syrup","unit":"tbsp","qty":1,"section":"For the trout","alt":null},{"name":"Garlic, minced","unit":"tbsp","qty":1,"section":"For the trout","alt":null},{"name":"Soy sauce","unit":"tsp","qty":1,"section":"For the trout","alt":null},{"name":"Smoked paprika","unit":"tsp","qty":1,"section":"For the trout","alt":null},{"name":"Ripe mangoes","unit":"","qty":2,"section":"Mango salsa","alt":null},{"name":"Red onion","unit":"","qty":1,"section":"Mango salsa","alt":null},{"name":"Avocado","unit":"","qty":1,"section":"Mango salsa","alt":null},{"name":"Jalapeno","unit":"","qty":1,"section":"Mango salsa","alt":null},{"name":"Cucumber","unit":"","qty":1,"section":"Mango salsa","alt":null},{"name":"Coriander, chopped","unit":"g","qty":20,"section":"Mango salsa","alt":null},{"name":"Lime, juice of","unit":"","qty":1,"section":"Mango salsa","alt":null},{"name":"Jasmine rice (dry)","unit":"g","qty":120,"section":"Serve","alt":null}],"steps":["Mix sriracha, maple, garlic, soy and paprika; coat the trout.","Dice the mango, red onion, avocado, jalapeno and cucumber; fold with coriander, lime, salt and pepper.","Bake the trout at 200C (180C fan) for roughly 8-10 minutes, or pan-sear skin side down for 3-4 minutes and flip for 1 minute. Trout fillets are thin, so check early: it is done when the flesh is opaque and flakes easily.","Serve over jasmine rice, salsa on top."],"weighing":"Serves 2. Cook the trout fresh (it reheats poorly and the salsa is raw). If prepping, portion rice and cooked trout (eat within 1 day for rice), keep salsa airtight and add fresh - avocado browns, so add a little extra lime.","tips":["Salsa is best made same-day; avocado in particular doesn't keep.","Trout is an oily fish with about the same protein as farmed salmon per 100g (about 20g raw) but roughly a third fewer calories (141 vs 208 kcal per 100g raw). Source: USDA FoodData Central.","Macros reworked from the salmon version: 260g raw fish swaps 541 kcal and 34.9g fat for 367 kcal and 16.1g fat (USDA values), so about 87 kcal and 9g fat less per portion."]},{"id":"fish-finger-pie","name":"Fish Finger Pie (levelled up)","cat":"Fish","serves":3,"freezer":true,"prep":"40 min","blurb":"The bare-bones original, upgraded: herbed cheddar mash, mustard, lemon, peas baked in.","improved":true,"macros":{"kcal":725,"protein":30,"carbs":78,"fat":31},"ingredients":[{"name":"Fish fingers (10-12)","unit":"g","qty":360,"section":"","alt":null},{"name":"Potatoes, for mash","unit":"g","qty":800,"section":"","alt":null},{"name":"Butter","unit":"g","qty":30,"section":"","alt":null},{"name":"Milk, a splash","unit":"ml","qty":50,"section":"","alt":null},{"name":"Mature cheddar, grated","unit":"g","qty":80,"section":"","alt":null},{"name":"Dijon or English mustard","unit":"tsp","qty":1,"section":"","alt":"my add - stir into the mash"},{"name":"Lemon zest","unit":"","qty":1,"section":"","alt":"my add"},{"name":"Chives or parsley, chopped","unit":"tbsp","qty":2,"section":"","alt":"my add"},{"name":"Frozen peas","unit":"g","qty":150,"section":"","alt":null},{"name":"Sweetcorn","unit":"g","qty":100,"section":"","alt":null}],"steps":["Bake the fish fingers ~5 min just to firm up, then break into chunks in an ovenproof dish.","Boil the potatoes, mash with butter, milk, half the cheddar, the mustard, lemon zest and herbs. Season well.","Scatter the peas and sweetcorn over the fish, spoon the mash on top, fork it rough, top with the rest of the cheddar.","Bake 20-25 min at 200C until golden and bubbling."],"weighing":"Serves 3. Freezes well before or after baking - portion into boxes. From frozen, oven ~30 min covered then uncovered to brown.","tips":["Improvements I made: mustard + lemon zest + herbs + cheddar in the mash lift it from beige to actually good; peas and corn go inside so it's a complete plate.","A layer of wilted spinach under the mash adds veg without anyone noticing."]},{"id":"garlic-butter-soy-sandwich","name":"Garlic Butter Soy Honey Chicken Sandwich","cat":"Chicken","serves":1,"freezer":"partial","prep":"30 min","blurb":"Single-serve crispy chicken sandwich with a sticky garlic-butter-soy glaze.","improved":false,"macros":{"kcal":880,"protein":45,"carbs":118,"fat":24},"ingredients":[{"name":"Chicken breast (~115g / 4oz)","unit":"g","qty":115,"section":"","alt":null},{"name":"Plain flour","unit":"g","qty":25,"section":"","alt":null},{"name":"Egg","unit":"","qty":1,"section":"","alt":null},{"name":"Corn flakes, crushed","unit":"g","qty":40,"section":"","alt":null},{"name":"Light butter","unit":"g","qty":20,"section":"","alt":null},{"name":"Garlic, minced","unit":"cloves","qty":2,"section":"","alt":null},{"name":"Light soy sauce","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Brown sugar","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Honey","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Light sour cream","unit":"g","qty":30,"section":"","alt":null},{"name":"Sriracha","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Ciabatta roll","unit":"g","qty":90,"section":"","alt":null},{"name":"Cucumber, red onion, avocado oil, hot sauce","unit":"","qty":1,"section":"","alt":"quick salad"}],"steps":["Dredge chicken: flour, egg, crushed corn flakes. Air-fry 16 min at 195C, flipping halfway, to 74C internal.","Reduce light butter, garlic, soy, brown sugar, honey and 60ml water to a thick glaze.","Mix the sour cream with sriracha.","Slice cucumber and red onion, dress with avocado oil, hot sauce, salt, pepper, garlic.","Build: glazed crispy chicken, sriracha cream, in the ciabatta, salad on the side."],"weighing":"Single serve - scale x2/x3 for prep. Freeze breaded cutlets (cooked, flat); glaze fresh. Salad and sauce keep 2 days.","tips":["Scales up cleanly for batch prep - do 4 cutlets at once.","Use a probe: breast to 74C, no higher, or it dries."]},{"id":"harissa-carrots-chickpeas","name":"Harissa Roasted Carrots & Chickpeas with Yogurt & Feta","cat":"Veg","serves":3,"freezer":"partial","prep":"45 min","blurb":"Big-flavour traybake over garlicky yogurt. Genuinely good cold too.","improved":false,"macros":{"kcal":450,"protein":16,"carbs":40,"fat":25},"ingredients":[{"name":"Large carrots, halved lengthways","unit":"","qty":6,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Honey","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Garlic powder, smoked paprika","unit":"tsp","qty":0.25,"section":"","alt":null},{"name":"Chickpeas (1 tin, drained)","unit":"g","qty":240,"section":"","alt":null},{"name":"Harissa","unit":"tbsp","qty":2,"section":"","alt":"Obscure? Swap: 1 tbsp tomato puree + chilli + cumin + garlic"},{"name":"Plain Greek yogurt","unit":"g","qty":120,"section":"","alt":null},{"name":"Feta","unit":"g","qty":70,"section":"","alt":null},{"name":"Parsley, chopped","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Tahini","unit":"tbsp","qty":1.5,"section":"","alt":null},{"name":"Chilli-infused olive oil","unit":"tsp","qty":1,"section":"","alt":null}],"steps":["Oven 200C fan. Toss carrots with oil, honey, garlic powder, paprika and salt. Roast 15 min.","Drain, rinse and pat-dry the chickpeas; toss with harissa, oil, salt and pepper.","Flip the carrots, push aside, add the chickpeas to the tray. Roast 20-25 min more.","Spread yogurt on a plate, pile on the carrots and chickpeas, top with feta, parsley, tahini and chilli oil."],"weighing":"Serves 3 as a main. Roasted components keep 3-4 days fridge and freeze (texture softens slightly). Keep yogurt separate and add fresh.","tips":["Add a grain (couscous or bulgur) to bulk it into a bigger meal.","For more protein per portion, double the chickpeas or add 150g chicken thigh."]},{"id":"hispi-cabbage-tofu","name":"Roasted Hispi Cabbage with Sesame Whipped Tofu","cat":"Veg","serves":2,"freezer":false,"prep":"40 min","blurb":"Charred sweet cabbage over silky sesame tofu. A striking veggie plate.","improved":false,"macros":{"kcal":430,"protein":15,"carbs":21,"fat":31},"ingredients":[{"name":"Hispi (pointed) cabbage","unit":"","qty":1,"section":"","alt":"Swap: sweetheart cabbage, or wedges of savoy"},{"name":"Sesame oil","unit":"tbsp","qty":1,"section":"","alt":null},{"name":"Maldon sea salt","unit":"tsp","qty":1,"section":"","alt":null},{"name":"White miso","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Tahini","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Rice wine vinegar","unit":"tsp","qty":1,"section":"","alt":"Swap: any mild vinegar"},{"name":"Silken tofu, well drained","unit":"g","qty":300,"section":"","alt":null},{"name":"Chives","unit":"g","qty":10,"section":"","alt":null},{"name":"Crispy chilli oil","unit":"tbsp","qty":1.5,"section":"","alt":null},{"name":"Toasted sesame seeds (black & white)","unit":"tbsp","qty":2,"section":"","alt":null}],"steps":["Oven 220C. Quarter the cabbage into wedges, rub with oil, salt and pepper.","Roast 15 min, then cover with foil, drop to 200C and roast 10-15 min more until a toothpick slides through easily.","Blend sesame oil, salt, miso, tahini, vinegar and the drained tofu until smooth; chill to firm slightly.","Spread the whipped tofu, layer the cabbage, top with chilli oil and sesame chives."],"weighing":"Serves 2 as a light main. Best fresh - roasted cabbage steams in the box and the whipped tofu weeps. Keep as an occasional fresh-cook, not batch prep.","tips":["Naturally light on protein (~14g/portion from tofu) - add edamame or a soft-boiled egg to push it up.","Genuinely low-calorie and vegan as written."]},{"id":"nduja-risotto","name":"Tomato 'Nduja Risotto (built out)","cat":"Veg / pasta","serves":2,"freezer":true,"prep":"35 min","blurb":"Three-line original turned into a proper method with quantities.","improved":true,"macros":{"kcal":625,"protein":19,"carbs":74,"fat":28},"ingredients":[{"name":"Risotto (arborio) rice","unit":"g","qty":180,"section":"","alt":null},{"name":"'Nduja","unit":"g","qty":60,"section":"","alt":"Obscure? Swap: 1 tbsp tomato puree + chorizo + chilli flakes"},{"name":"Cherry or tinned tomatoes","unit":"g","qty":400,"section":"","alt":null},{"name":"Onion, finely chopped","unit":"","qty":1,"section":"","alt":null},{"name":"Garlic","unit":"cloves","qty":2,"section":"","alt":null},{"name":"Hot stock","unit":"ml","qty":800,"section":"","alt":"chicken or veg"},{"name":"Parmesan","unit":"g","qty":40,"section":"","alt":null},{"name":"Butter","unit":"g","qty":20,"section":"","alt":null},{"name":"Basil","unit":"","qty":1,"section":"","alt":"to finish"}],"steps":["Soften the onion and garlic in a little oil. Add the 'nduja and cook until it melts and the oil turns red.","Add the tomatoes and cook down until jammy, 6-8 min.","Stir in the rice for a minute, then add hot stock a ladle at a time, stirring, until creamy and al dente (~18 min).","Beat in the parmesan and butter off the heat, rest 2 min, finish with basil."],"weighing":"Serves 2. Risotto freezes acceptably (best used to make arancini). Fridge 2 days; loosen with a splash of stock/water on reheat as it firms up.","tips":["Improvements I made: added onion, garlic, tomatoes weight, stock and a parmesan-butter finish the original left out entirely.","'Nduja is spicy and salty - taste before adding extra salt."]},{"id":"crispy-rice-chicken-salad","name":"Crispy Rice Chicken & Cucumber Salad (built out)","cat":"Chicken","serves":2,"freezer":false,"prep":"35 min","blurb":"Skeleton original fleshed into a real crispy-rice salad with a nam-jim style dressing.","improved":true,"macros":{"kcal":615,"protein":33,"carbs":58,"fat":26},"ingredients":[{"name":"Cooked cold rice (day-old)","unit":"g","qty":300,"section":"","alt":"weigh ~150g dry -> ~300g cooked"},{"name":"Chicken thighs","unit":"g","qty":300,"section":"","alt":null},{"name":"Cucumber","unit":"","qty":1,"section":"","alt":null},{"name":"Little gem or mixed salad","unit":"","qty":1,"section":"","alt":null},{"name":"Oil for crisping","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Lime juice","unit":"tbsp","qty":2,"section":"Dressing (my add)","alt":null},{"name":"Fish sauce","unit":"tbsp","qty":1,"section":"Dressing (my add)","alt":"Swap: soy sauce"},{"name":"Honey","unit":"tsp","qty":2,"section":"Dressing (my add)","alt":null},{"name":"Chilli & garlic","unit":"","qty":1,"section":"Dressing (my add)","alt":null}],"steps":["Press cold rice into a thin layer and shallow-fry (or air-fry with oil) until golden and crunchy; break into shards.","Season and pan-fry the chicken thighs until charred and cooked; slice.","Whisk the dressing.","Toss cucumber, leaves, chicken and crispy rice with the dressing just before eating."],"weighing":"Serves 2. Assemble fresh - crispy rice softens fast. Keep cooked chicken (fridge 2 days) and fry rice to order.","tips":["Improvements I made: the original was four words - I added a crisping method, a proper dressing and a protein cook.","Great use for leftover rice from the fried-rice batch (within the 1-day rice window)."]},{"id":"buffalo-chicken-potato-bowls","name":"High-Protein Buffalo Chicken Potato Bowls","cat":"Chicken","serves":4,"freezer":true,"prep":"40 min","blurb":"Lean, high-protein, properly meal-prep friendly. Salad and sauce stored separately.","improved":false,"macros":{"kcal":575,"protein":53,"carbs":45,"fat":20},"ingredients":[{"name":"Chicken breast, small cubes","unit":"g","qty":800,"section":"Buffalo chicken","alt":null},{"name":"Salt, parsley, garlic powder, cumin, smoked paprika","unit":"tsp","qty":1.5,"section":"Buffalo chicken","alt":null},{"name":"Olive oil","unit":"tsp","qty":2,"section":"Buffalo chicken","alt":null},{"name":"Buffalo hot sauce (to cook)","unit":"g","qty":100,"section":"Buffalo chicken","alt":"e.g. Frank's Red Hot"},{"name":"Light butter (to cook)","unit":"g","qty":30,"section":"Buffalo chicken","alt":null},{"name":"White potatoes, cubed","unit":"g","qty":800,"section":"Crispy potatoes","alt":null},{"name":"Salt, smoked paprika, garlic powder, parsley, cumin","unit":"tsp","qty":1.5,"section":"Crispy potatoes","alt":null},{"name":"Olive oil or spray (optional)","unit":"tsp","qty":2,"section":"Crispy potatoes","alt":null},{"name":"Buffalo hot sauce","unit":"g","qty":150,"section":"Creamy buffalo sauce (small amount per meal)","alt":null},{"name":"Low-fat yogurt","unit":"g","qty":100,"section":"Creamy buffalo sauce (small amount per meal)","alt":null},{"name":"Light mayo","unit":"g","qty":100,"section":"Creamy buffalo sauce (small amount per meal)","alt":null},{"name":"Honey","unit":"g","qty":25,"section":"Creamy buffalo sauce (small amount per meal)","alt":null},{"name":"Tomatoes, chopped","unit":"g","qty":150,"section":"Fresh side salad (store separate)","alt":null},{"name":"Red onion, fine chopped","unit":"g","qty":100,"section":"Fresh side salad (store separate)","alt":null},{"name":"Cucumber, deseeded, chopped","unit":"g","qty":100,"section":"Fresh side salad (store separate)","alt":null},{"name":"Spring onion, chopped","unit":"g","qty":50,"section":"Fresh side salad (store separate)","alt":"was 'scallion'"},{"name":"Parsley","unit":"g","qty":25,"section":"Fresh side salad (store separate)","alt":null},{"name":"Lemon juice","unit":"","qty":0.5,"section":"Fresh side salad (store separate)","alt":null}],"steps":["Season the diced chicken with the spices and oil.","Cook in light butter/spray until golden. Lower heat, add 100g buffalo sauce, coat.","Cube and season the potatoes; oven or air-fry 18-20 min at 200C until crisp.","Mix the creamy sauce ingredients; refrigerate.","Chop and season the salad; store separately.","Box up chicken + potatoes; add sauce and salad when serving."],"weighing":"4 portions. Weigh cooked and split evenly: roughly 150g cooked chicken + ~170g potato per box. Chicken + potatoes freeze well; keep salad and sauce out of the freezer.","tips":["This is your highest-protein prep here (~55g/portion) and the most freezer-robust - lean on it.","The creamy sauce is calorie-dense; a 30g spoon per box is plenty."],"link":"https://www.instagram.com/reel/DELVrTfoaFT/"},{"id":"cheeseburger-hot-pockets","name":"Cheeseburger Hot Pockets","cat":"Beef","serves":6,"freezer":true,"prep":"45 min","blurb":"2-ingredient yogurt dough, seasoned beef, sealed and baked. Freezer gold.","improved":false,"macros":{"kcal":355,"protein":24,"carbs":51,"fat":5},"ingredients":[{"name":"Plain flour","unit":"g","qty":400,"section":"","alt":null},{"name":"0% Greek yogurt","unit":"g","qty":420,"section":"","alt":null},{"name":"Beef mince 7% fat","unit":"g","qty":170,"section":"","alt":"See note: I'd double this to 340g"},{"name":"Coarse salt","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Onion powder, garlic powder, pepper, oregano, cumin, chilli powder","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Worcestershire sauce","unit":"","qty":1,"section":"","alt":"a splash"},{"name":"Diced tomatoes","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Light mayo","unit":"g","qty":30,"section":"","alt":null},{"name":"2% cheddar","unit":"g","qty":40,"section":"","alt":null},{"name":"Fat-free cheddar","unit":"g","qty":40,"section":"","alt":null},{"name":"Pickled jalapenos, diced","unit":"g","qty":20,"section":"","alt":null}],"steps":["Mix flour and yogurt into a dough; add flour if sticky. Rest briefly.","Brown the beef with the salt, onion/garlic powder, pepper, oregano, cumin, chilli and Worcestershire; stir in the diced tomato.","Roll dough portions thin, thinning the edges for sealing.","Fill with beef, mayo, both cheddars, jalapenos; fold and crimp to seal.","Bake ~20-25 min at 200C until golden. (An egg wash helps colour.)"],"weighing":"Makes ~6 pockets. Freeze after baking; reheat from frozen in the oven ~20 min or air fryer. Great grab-and-go.","tips":["Honest note: 170g beef across 6 pockets is thin - I'd double the beef to ~340g for a proper filling and more protein.","0% Greek yogurt dough is genuinely high-protein - lean, not just a gimmick."],"link":"https://www.instagram.com/reel/CzT9FHUr1p8/"},{"id":"steak-smashed-potato-salad","name":"Crispy Smashed Potato & Steak Salad","cat":"Beef","serves":2,"freezer":false,"improved":false,"prep":"50 min","blurb":"Charred smashed potatoes, rested steak and salted cucumber in a miso-sesame dressing. Prep the parts separately, toss together on the day.","macros":{"kcal":620,"protein":39,"carbs":52,"fat":30},"ingredients":[{"name":"New potatoes","unit":"g","qty":500,"section":"Bowl","alt":null},{"name":"Rump or sirloin steak","unit":"g","qty":300,"section":"Bowl","alt":null},{"name":"Cucumber","unit":"g","qty":300,"section":"Bowl","alt":null},{"name":"Olive oil","unit":"ml","qty":15,"section":"Bowl","alt":null},{"name":"Spring onions","unit":"","qty":3,"section":"Bowl","alt":null},{"name":"Coriander","unit":"g","qty":10,"section":"Bowl","alt":null},{"name":"Toasted sesame seeds","unit":"tbsp","qty":1,"section":"Bowl","alt":null},{"name":"White miso","unit":"g","qty":20,"section":"Dressing","alt":"No white miso? Use red miso, or 1 tsp tahini + a splash more soy"},{"name":"Toasted sesame oil","unit":"ml","qty":10,"section":"Dressing","alt":null},{"name":"Rice vinegar","unit":"ml","qty":15,"section":"Dressing","alt":"Sub white wine vinegar or lime juice"},{"name":"Soy sauce","unit":"tbsp","qty":1,"section":"Dressing","alt":null},{"name":"Honey","unit":"tsp","qty":1,"section":"Dressing","alt":null},{"name":"Garlic","unit":"cloves","qty":1,"section":"Dressing","alt":null},{"name":"Chilli oil","unit":"tsp","qty":1,"section":"Dressing","alt":"To taste - start with 1 tsp"}],"steps":["Boil the potatoes whole for 20 minutes until a knife slides in with no resistance. Drain well and let them steam-dry for a minute, then smash each one flat with the base of a mug.","Toss the smashed potatoes with the oil and salt. Roast at 220C for 30-35 minutes until the edges are shattered and dark gold.","While the potatoes roast, get a pan properly hot and cook the steak fast, about 3 minutes a side for medium-rare. Rest for 8 minutes, then slice against the grain.","Smash the cucumber with the flat of a knife blade, tear into rough chunks, salt it and leave for 10 minutes, then squeeze out the water by hand. This is what keeps the box from turning watery - don't skip it.","Whisk the miso, sesame oil, rice vinegar, soy sauce, honey and grated garlic into a dressing. Toss the potatoes, steak and cucumber with the dressing, finish with chilli oil, sesame seeds, spring onion and coriander."],"weighing":"Serves 2 as a full bowl. Prep components separately and keep un-dressed - potatoes, steak and drained cucumber each keep 3 days in the fridge as parts. Dress and assemble on the day you eat it; once dressed, the cucumber will weep and go soft within a few hours.","tips":["Salting and draining the cucumber is the one step that actually matters here - skip it and the dressing pools with cucumber water by day two.","Steak reheats badly. If you're eating this as leftovers, keep it cold and sliced rather than microwaving it - a warm steak salad, not a hot one."]},{"id":"charred-lime-gochujang-salmon","name":"Charred Lime Gochujang Salmon Bites","cat":"Fish","serves":4,"freezer":"partial","improved":false,"prep":"30 min","blurb":"Grilled salmon cubes with charred lime, a gochujang yogurt sauce, and a quick cucumber-tomato salad over rice.","link":"https://www.instagram.com/reel/Db88kwBS1Qr/","macros":{"kcal":844,"protein":45,"carbs":67,"fat":45},"ingredients":[{"name":"Salmon, cut into 4cm cubes","unit":"g","qty":680,"section":"Salmon","alt":"was 1.5lb"},{"name":"Avocado oil","unit":"tbsp","qty":1,"section":"Salmon","alt":null},{"name":"Sea salt","unit":"tsp","qty":1,"section":"Salmon","alt":null},{"name":"Black pepper","unit":"tsp","qty":1,"section":"Salmon","alt":null},{"name":"Onion powder","unit":"tsp","qty":1,"section":"Salmon","alt":null},{"name":"Lime, halved","unit":"","qty":1,"section":"Salmon","alt":null},{"name":"Greek yogurt","unit":"g","qty":120,"section":"Gochujang lime yogurt","alt":"was 1/2 cup"},{"name":"Avocado oil","unit":"tbsp","qty":1,"section":"Gochujang lime yogurt","alt":null},{"name":"Gochujang","unit":"tbsp","qty":2,"section":"Gochujang lime yogurt","alt":null},{"name":"Honey","unit":"tbsp","qty":1,"section":"Gochujang lime yogurt","alt":null},{"name":"Charred lime juice","unit":"tbsp","qty":1,"section":"Gochujang lime yogurt","alt":null},{"name":"Sea salt","unit":"tsp","qty":0.25,"section":"Gochujang lime yogurt","alt":null},{"name":"Cucumber, chopped","unit":"g","qty":300,"section":"Cucumber-tomato salad","alt":"was 1 large cucumber"},{"name":"Cherry tomatoes, halved","unit":"g","qty":150,"section":"Cucumber-tomato salad","alt":"was 1 cup"},{"name":"Rice vinegar","unit":"tbsp","qty":1,"section":"Cucumber-tomato salad","alt":null},{"name":"Toasted sesame oil","unit":"tsp","qty":1,"section":"Cucumber-tomato salad","alt":null},{"name":"Black sesame seeds","unit":"tsp","qty":1,"section":"Cucumber-tomato salad","alt":null},{"name":"Sea salt","unit":"tsp","qty":0.25,"section":"Cucumber-tomato salad","alt":null},{"name":"Jasmine rice, dry","unit":"g","qty":240,"section":"To serve","alt":null},{"name":"Avocado","unit":"","qty":2,"section":"To serve","alt":null},{"name":"White sesame seeds","unit":"tsp","qty":1,"section":"To serve","alt":null},{"name":"Spring onions","unit":"","qty":2,"section":"To serve","alt":"was 'green onions'"}],"steps":["Cook the jasmine rice according to the packet, then keep warm.","Set an oven rack in the upper third and heat the grill (the UK equivalent of a US broiler) to its highest setting.","Toss the salmon cubes with the avocado oil, sea salt, black pepper and onion powder. Spread out on a lined tray, oiled side up, and add the lime halves cut-side up, drizzled with a little oil.","Grill for about 8 minutes, until the salmon is browned at the edges and just cooked through, and the limes are charred.","While the salmon grills, toss the cucumber with the rice vinegar, cherry tomatoes, sesame oil, black sesame seeds and sea salt.","Squeeze the juice from the charred limes. Whisk together the Greek yogurt, avocado oil, gochujang, honey, 1 tbsp of the charred lime juice and sea salt.","Toss the warm salmon through half the gochujang yogurt sauce.","Build bowls with jasmine rice, the sauced salmon, the cucumber-tomato salad and half an avocado each. Finish with the rest of the gochujang yogurt, sesame seeds and spring onion."],"weighing":"Serves 4. The salmon and rice keep well as parts for 2 days in the fridge - dress the salad and slice the avocado fresh each time, both go soft and brown if prepped ahead.","tips":["The lime halves need to actually touch the tray to char properly - don't perch them on top of the salmon.","Charring the lime first, then juicing it, is what gives the yogurt sauce its smoky edge - a fresh squeeze alone tastes flatter."]},{"id":"zero-carb-chicken-nuggets","name":"Zero Carb Chicken Nuggets","cat":"Chicken","serves":2,"freezer":true,"improved":false,"prep":"30 min","blurb":"Chicken breast blended with egg and parmesan, no breadcrumbs needed. Genuinely carb-free and freezes well.","link":"https://www.instagram.com/reel/Db6KQsHOV3W/","macros":{"kcal":235,"protein":35,"carbs":0,"fat":10},"ingredients":[{"name":"Egg","unit":"","qty":1,"section":"","alt":null},{"name":"Chicken breast","unit":"","qty":1,"section":"","alt":null},{"name":"Parmesan, grated","unit":"g","qty":50,"section":"","alt":"was 1/2 cup"},{"name":"Salt","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Black pepper","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Garlic powder","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Onion powder","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Paprika","unit":"tsp","qty":1,"section":"","alt":null}],"steps":["Heat the oven to 200C (a standard bake temperature for nuggets - the original recipe just said '200 degrees' with no unit, so this is my best reading; if your air fryer defaults to Fahrenheit, that's roughly 400F).","Roughly chop the chicken breast, then blitz it in a food processor with the egg, salt, pepper, garlic powder, onion powder and paprika until it forms a rough paste.","Pulse in the grated parmesan until just combined.","Shape into about 10 nuggets using two spoons or damp hands, and place on a lined baking tray.","Bake for 20 minutes, turning halfway, until firm and golden.","Alternatively, air fry at 200C for 10-12 minutes, turning halfway."],"weighing":"Makes about 10 nuggets, serving 2 as a main with a side, or more as a snack. Freezes well raw or cooked - if freezing raw, open-freeze on a tray first so they don't stick together, then bag them up.","tips":["The mix is quite wet - wetting your hands before shaping stops it sticking to your fingers.","Per the original recipe: each nugget is roughly 47 kcal, 0g carbs, 2g fat, 7g protein - my own working from the ingredients lands close to that (see Guide for method)."]},{"id":"crispy-beef-cucumber-noodles","name":"Spicy Cucumber Noodle Salad with Crispy Beef","cat":"Beef","serves":2,"freezer":false,"improved":true,"prep":"25 min","blurb":"Built out from a 3-line skeleton: crispy chilli beef mince over cold cucumber ribbons in a sharp, sweet-hot dressing.","link":"https://www.instagram.com/reel/DbTgWg8xSpj/","macros":{"kcal":629,"protein":42,"carbs":21,"fat":41},"ingredients":[{"name":"Beef mince, 10% fat","unit":"g","qty":400,"section":"Crispy beef","alt":null},{"name":"Cornflour","unit":"tbsp","qty":1,"section":"Crispy beef","alt":null},{"name":"Garlic, minced","unit":"cloves","qty":2,"section":"Crispy beef","alt":null},{"name":"Ginger, grated","unit":"tsp","qty":1,"section":"Crispy beef","alt":null},{"name":"Soy sauce","unit":"tbsp","qty":2,"section":"Dressing","alt":null},{"name":"Chilli oil","unit":"tbsp","qty":2,"section":"Dressing","alt":null},{"name":"Rice vinegar","unit":"tbsp","qty":2,"section":"Dressing","alt":null},{"name":"Honey","unit":"tbsp","qty":1,"section":"Dressing","alt":null},{"name":"Toasted sesame oil","unit":"tsp","qty":1,"section":"Dressing","alt":null},{"name":"Chilli flakes","unit":"tsp","qty":1,"section":"Dressing","alt":null},{"name":"Cucumbers, spiralised or peeled into ribbons","unit":"g","qty":600,"section":"Bowl","alt":"was '2 large'"},{"name":"Spring onions","unit":"","qty":3,"section":"Bowl","alt":null},{"name":"Sesame seeds","unit":"tbsp","qty":1,"section":"Bowl","alt":null},{"name":"Coriander","unit":"g","qty":10,"section":"Bowl","alt":null}],"steps":["Toss the beef mince with the cornflour, garlic and ginger until evenly coated.","Fry in a hot, dry pan (or with a very thin film of oil) for 6-8 minutes, breaking it up less than usual and pressing it flat occasionally, until genuinely crispy at the edges rather than just browned.","While the beef cooks, spiralise or peel the cucumbers into long ribbons or noodles. Whisk the soy sauce, chilli oil, rice vinegar, honey, sesame oil and chilli flakes into a dressing.","Toss the cucumber noodles with most of the dressing and pile into bowls.","Top with the crispy beef, drizzle over the rest of the dressing, and finish with spring onion, sesame seeds and coriander. Serve straight away while the beef is still crisp."],"weighing":"Serves 2. This one only exists as a title and three ingredients from the source - I've built out full quantities and a method around it based on the flavour profile in the name (crispy, sharp, chilli-forward). Worth checking the actual reel against this if you want to match it more closely.","tips":["Cornflour on the mince is what gets it properly crispy rather than just browned - don't skip it.","This is a fresh-assembly dish, not a make-ahead one: dressed cucumber weeps within an hour or two, so keep the beef, cucumber and dressing in separate containers and combine just before eating."]},{"id":"sausage-gochujang-rigatoni","name":"Sausage Gochujang Rigatoni","cat":"Pasta","serves":4,"freezer":false,"improved":false,"prep":"20 min","blurb":"Crumbled pork sausage, gochujang and single cream tossed through rigatoni, finished with lime, parmesan and toasted panko.","link":null,"macros":{"kcal":917,"protein":31,"carbs":93,"fat":47},"ingredients":[{"name":"Shallot, minced","unit":"","qty":1,"section":"","alt":null},{"name":"Garlic, minced","unit":"cloves","qty":3,"section":"","alt":null},{"name":"Pork sausages, skins removed","unit":"","qty":6,"section":"","alt":null},{"name":"Butter","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Gochujang","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Single cream","unit":"ml","qty":220,"section":"","alt":null},{"name":"Honey","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Limes","unit":"","qty":2,"section":"","alt":null},{"name":"Parmesan, grated","unit":"g","qty":40,"section":"","alt":null},{"name":"Rigatoni","unit":"g","qty":400,"section":"","alt":null},{"name":"Coriander, chopped","unit":"g","qty":30,"section":"","alt":null},{"name":"Panko breadcrumbs","unit":"g","qty":15,"section":"","alt":null},{"name":"Salt","unit":"tsp","qty":1,"section":"","alt":null},{"name":"Black pepper","unit":"tsp","qty":0.5,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":1,"section":"","alt":null}],"steps":["Mince the shallot and garlic (photographed step 1 stops here - the rest of the method below is my own, built to standard technique for this dish, since the rest of the card wasn't visible in the photo).","Bring a large pot of salted water to the boil for the rigatoni.","Toast the panko breadcrumbs in a dry pan with the olive oil until golden, then tip out and set aside.","Squeeze the sausage meat out of its skins into a large frying pan with the butter. Break it up and fry over medium-high heat until browned, then add the shallot and garlic and cook for 2-3 minutes.","Stir in the gochujang and cook for a minute until it darkens slightly, then add the single cream and honey. Simmer gently for 3-4 minutes until it thickens a little. Zest one lime into the sauce.","Meanwhile, cook the rigatoni until just al dente, then drain, keeping a mugful of pasta water back.","Toss the pasta through the sauce, loosening with a splash of pasta water if it's too thick. Season with salt and pepper, and add lime juice to taste.","Serve topped with the toasted panko, parmesan, coriander and a wedge of the second lime."],"weighing":"Serves 4. Best fresh - the cream sauce can split slightly on reheating, so warm it gently with a splash of milk or water rather than blasting it in the microwave. Fridge for 2 days, not a freezer dish.","tips":["Only Step 1 was visible in the photo you sent - everything from Step 2 onward is my own construction based on how this dish is usually made, not transcribed from your source. Worth a quick check against the original if you want it exact.","Toasting the panko separately and adding it at the end is what keeps it crunchy - stirred into the sauce it just goes soft."]},{"id":"spicy-harissa-chickpeas","name":"Spicy Harissa Chickpeas","cat":"Veg","serves":4,"freezer":true,"improved":false,"prep":"35 min","blurb":"A batch-cook tomato and chickpea stew, sharpened with harissa and lemon. Makes a meal now and three more through the week.","link":null,"macros":{"kcal":277,"protein":15,"carbs":38,"fat":8},"ingredients":[{"name":"Garlic, sliced","unit":"cloves","qty":2,"section":"","alt":null},{"name":"Cherry tomatoes","unit":"g","qty":500,"section":"","alt":null},{"name":"Tinned cherry tomatoes","unit":"g","qty":400,"section":"","alt":null},{"name":"Cooked chickpeas (2 x 570g jars)","unit":"g","qty":684,"section":"","alt":"drained weight - see note"},{"name":"Vegetable stock cube","unit":"","qty":1,"section":"","alt":null},{"name":"Harissa","unit":"tbsp","qty":2,"section":"","alt":null},{"name":"Lemon","unit":"","qty":1,"section":"","alt":null},{"name":"Olive oil","unit":"tbsp","qty":1,"section":"","alt":null}],"steps":["Peel and finely slice the garlic. Place a saucepan over medium-high heat and add the olive oil.","Poke the cherry tomatoes with the tip of a knife - this encourages them to pop as they cook.","Add the cherry tomatoes to the pan and cook for 3-4 minutes until they start to blister and pop, then add the garlic and cook for a further minute.","Add the tinned cherry tomatoes, crumble in the stock cube, and stir in the harissa. Half-fill the empty tin with water and add that too.","Bring to a simmer, then add the drained chickpeas. Simmer for 20-25 minutes, stirring occasionally, until it's thickened into a rich, glossy sauce.","Finish with the juice of the lemon and a final drizzle of olive oil. Season to taste."],"weighing":"Makes 4 portions - eat one now, fridge the rest for up to 3 days, or freeze. This is a proper batch-cook dish, good with rice, flatbread, or a fried egg on top.","tips":["The step text under Step 1 wasn't fully visible in your photo, so steps 3 onward are my own reconstruction of a standard harissa chickpea method, not a direct transcription - worth checking against the source if you want it exact.","Drained weight for '2 x 570g jars cooked chickpeas' is an estimate (roughly 60% of jar weight once you drain the liquid) - if your jars state a drained weight on the label, use that instead."]},{"id":"honey-bbq-beef-sliders","name":"Honey BBQ Cheesy Beef Sliders","cat":"Beef","serves":4,"freezer":"partial","improved":false,"prep":"35 min","blurb":"Balsamic-softened onions and BBQ beef mince, stacked into brioche buns with mozzarella and cheddar, baked until melted.","link":null,"macros":{"kcal":555,"protein":36,"carbs":50,"fat":24},"ingredients":[{"name":"Brioche buns","unit":"","qty":4,"section":"Bun & topping","alt":null},{"name":"Grated mozzarella","unit":"g","qty":50,"section":"Bun & topping","alt":null},{"name":"Cheddar cheese","unit":"g","qty":50,"section":"Bun & topping","alt":null},{"name":"Butter","unit":"tbsp","qty":1,"section":"Bun & topping","alt":null},{"name":"Garlic clove, minced","unit":"cloves","qty":1,"section":"Bun & topping","alt":null},{"name":"Fresh parsley, chopped","unit":"g","qty":10,"section":"Bun & topping","alt":null},{"name":"Sesame seeds","unit":"tsp","qty":0.5,"section":"Bun & topping","alt":null},{"name":"Olive oil","unit":"ml","qty":15,"section":"Bun & topping","alt":null},{"name":"Onion, sliced lengthways","unit":"","qty":1,"section":"Seasoned beef","alt":null},{"name":"Balsamic vinegar","unit":"tbsp","qty":1,"section":"Seasoned beef","alt":null},{"name":"Beef mince, 5% fat","unit":"g","qty":400,"section":"Seasoned beef","alt":null},{"name":"Passata","unit":"g","qty":80,"section":"Seasoned beef","alt":null},{"name":"BBQ seasoning","unit":"tbsp","qty":1,"section":"Seasoned beef","alt":null},{"name":"Tomato puree","unit":"tbsp","qty":1,"section":"Seasoned beef","alt":null},{"name":"Worcestershire sauce","unit":"tbsp","qty":1,"section":"Seasoned beef","alt":null},{"name":"Honey","unit":"tbsp","qty":0.5,"section":"Seasoned beef","alt":null}],"steps":["Heat the oven to 180C (the exact number was hard to read on your photo - 180C fan is a safe standard for a melted-cheese bake; adjust if the original said otherwise).","For the seasoned beef, slice the onion lengthways. Heat the olive oil in a large frying pan over medium heat and cook the onion with the balsamic vinegar until softened.","Add the beef mince to the pan and cook until browned through.","Add the BBQ seasoning, passata, tomato puree and Worcestershire sauce. Season with salt and pepper, mix together, and leave to bubble for a couple of minutes.","Halve the brioche buns and lay the bottoms out in a large baking dish. Top with the seasoned beef, then the grated mozzarella and cheddar.","Meanwhile, melt the butter and mince the garlic into it. Add the bun tops, brush with the garlic butter, and sprinkle over the sesame seeds and parsley.","Loosely cover the dish with foil and bake for 15 minutes, then uncover and bake for a further 5-10 minutes until the cheese is melted and the tops are golden."],"weighing":"Serves 4. The photo's ingredient panel had the quantities and names slightly offset from the scan angle, so I've reconstructed sensible amounts cross-checked against the method text (e.g. small amounts of butter and garlic for the glaze, matching 'melt the butter and mince the garlic'). Worth a quick check against the original if any amount looks off to you.","tips":["Freeze the cooked beef mixture on its own - it reheats well. The assembled, baked sliders don't freeze or reheat as nicely once the bread's involved.","If you want a sharper glaze, brush a little extra BBQ sauce over the bun tops before baking, in addition to the garlic butter."]}];
+var PHOTOS={"honey-garlic-fried-rice":"Fried_rice_with_chicken_and_egg.jpg","creamy-mushroom-pasta":"Creamy_Mushroom_Pasta.jpg","lime-chicken-sandwich":"Barbecue_chicken_sandwich-01.jpg","chicken-shawarma-wrap":"Shawarma.jpg","miso-chicken-spinach-rice":"Bhutanese_red_rice_with_chicken_and_spinach.jpg","scallion-oil-noodles":"Ginger_Scallion_Noodles_%E2%80%93_pickled_shiitake,_cucumber,_wakame.jpg","caramelised-onion-spaghetti":"Aglio_e_olio.jpg","crispy-chicken-tacos":"Green_Chile_Chicken_Taco_-_El_Parasol_Santa_Fe_NM.jpg","fish-finger-pie":"Fish_Pie.jpg","garlic-butter-soy-sandwich":"Fried_chicken_sandwich_with_comeback_sauce.jpg","nduja-risotto":"Risotto_al_Pomodoro.jpg","crispy-rice-chicken-salad":"Green_Chicken_with_Rice_and_cucumber_salad_top_shot.jpg","cheeseburger-hot-pockets":"Hot_Pocket_Cooked.jpg","steak-smashed-potato-salad":"Grilled_steak_served_on_a_plate_with_avocado_and_sauce.jpg","charred-lime-gochujang-salmon":"Grilled_salmon.jpg","zero-carb-chicken-nuggets":"Chicken_Nuggets.jpg","sausage-gochujang-rigatoni":"Rigatonni_con_ragu_015.jpg","spicy-harissa-chickpeas":"Nohut_yahni.jpg","honey-bbq-beef-sliders":"Slider_sandwiches.jpg"};
+var BY_ID={}; RECIPES.forEach(function(r){BY_ID[r.id]=r;});
+var ORIG=JSON.parse(JSON.stringify(RECIPES)); /* built-in recipes, kept untouched so any edit can be reset */
+var DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var KEY='mealprep_state';
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+/* ---------- icons ---------- */
+var ICON={
+ grid:'<rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/>',
+ cal:'<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+ list:'<path d="M10 6.5h10.5M10 12h10.5M10 17.5h10.5"/><path d="M3.5 6.5l1.5 1.5 2.5-3M3.5 12l1.5 1.5 2.5-3M3.5 17.5l1.5 1.5 2.5-3"/>',
+ basket:'<path d="M3 9h18l-1.6 9.2a2 2 0 0 1-2 1.6H6.6a2 2 0 0 1-2-1.6L3 9z"/><path d="M8 9l3-5M16 9l-3-5"/>',
+ info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8h.01"/>',
+ plus:'<path d="M12 5v14M5 12h14"/>',
+ check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+ close:'<path d="M6 6l12 12M18 6L6 18"/>',
+ down:'<path d="M6 9l6 6 6-6"/>',
+ right:'<path d="M9 6l6 6-6 6"/>',
+ search:'<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
+ play:'<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>',
+ cam:'<path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/>',
+ dots:'<circle cx="5.5" cy="12" r="1.7" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.7" fill="currentColor" stroke="none"/><circle cx="18.5" cy="12" r="1.7" fill="currentColor" stroke="none"/>',
+ minus:'<path d="M5 12h14"/>'
+};
+function ic(n,s){s=s||22;return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICON[n]+'</svg>';}
+
+/* ---------- state ---------- */
+function DEF(){return {week:{},checked:{},plan:{},photos:{},links:{},sort:'default',have:{},manual:[],edits:{}};}
+var S=DEF();
+function blankSlot(){return {dish:null,wife:false};}
+function ensure(){
+  ['week','checked','plan','photos','links','have','edits'].forEach(function(k){ if(!S[k]||typeof S[k]!=='object'||Array.isArray(S[k])) S[k]={}; });
+  if(!Array.isArray(S.manual)) S.manual=[];
+  if(!S.sort) S.sort='default';
+  Object.keys(S.edits).forEach(function(id){ if(!BY_ID[id]||!validEdit(S.edits[id])) delete S.edits[id]; });
+  applyEdits();
+  Object.keys(S.week).forEach(function(id){ if(!BY_ID[id]) delete S.week[id]; });
+  DAYS.forEach(function(d){
+    if(!S.plan[d]) S.plan[d]={lunch:blankSlot(),dinner:blankSlot()};
+    ['lunch','dinner'].forEach(function(w){
+      var sl=S.plan[d][w]; if(!sl||typeof sl!=='object') sl=S.plan[d][w]=blankSlot();
+      if(sl.dish&&!BY_ID[sl.dish]){sl.dish=null;sl.wife=false;}
+    });
+  });
+}
+function load(){
+  try{ var raw=localStorage.getItem(KEY); if(raw){ var o=JSON.parse(raw); S=Object.assign(DEF(),o); } }catch(e){}
+  ensure();
+}
+function save(){
+  try{ localStorage.setItem(KEY,JSON.stringify(S)); return true; }catch(e){ return false; }
+}
+function snapshot(){return JSON.stringify(S);}
+function restoreSnap(snap){ try{ S=Object.assign(DEF(),JSON.parse(snap)); ensure(); save(); refresh(); }catch(e){} }
+
+/* ---------- helpers ---------- */
+function pDens(r){return r.macros.protein/r.macros.kcal*100;}
+function frac(n){
+  var r=Math.round(n*4)/4; if(r<0.25) r=0.25;
+  var w=Math.floor(r+1e-9), d=Math.round((r-w)*4)/4;
+  var g={0:'',0.25:'¼',0.5:'½',0.75:'¾'}[d]||'';
+  if(w===0&&g) return g; return String(w)+g;
+}
+function fmtQ(q,u){
+  if(!q) return '';
+  if(u==='g'||u==='ml'){ var v=q>=100?Math.round(q/5)*5:Math.round(q); if(v>=1000) return (Math.round(v/50)/20)+(u==='g'?' kg':' l'); return v+' '+u; }
+  return frac(q)+(u?' '+u:'');
+}
+function storageFor(r){
+  var rice=/rice|risotto/i.test(r.name)||r.ingredients.some(function(i){return /\brice\b/i.test(i.name);});
+  return {fridge:rice?'1 day':'2 days',freezer:r.freezer===true?'2-3 months':(r.freezer==='partial'?'Parts only':'Do not freeze'),rice:rice};
+}
+function fzInfo(r){
+  if(r.freezer===true) return {t:'Freezes well',c:'t-blue'};
+  if(r.freezer==='partial') return {t:'Part freezes',c:'t-amber'};
+  return {t:'Eat fresh',c:'t-red'};
+}
+function coverKey(r){var c=r.cat.toLowerCase(); if(c.indexOf('fish')>-1)return 'fish'; if(c.indexOf('chicken')>-1)return 'chicken'; if(c.indexOf('beef')>-1)return 'beef'; if(c.indexOf('pasta')>-1)return 'pasta'; return 'veg';}
+function linkFor(id){return S.links[id]||(BY_ID[id]&&BY_ID[id].link)||null;}
+var failed={};
+function commonsSrc(id){ return (PHOTOS[id]&&!failed[id]) ? 'https://commons.wikimedia.org/wiki/Special:FilePath/'+PHOTOS[id]+'?width=900' : null; }
+function photoSrc(id){ return S.photos[id]||commonsSrc(id); }
+function mediaHTML(id,cls,over){
+  var r=BY_ID[id], src=photoSrc(id), user=!!S.photos[id];
+  return '<div class="media '+(cls||'')+'"><div class="cover c-'+coverKey(r)+'" aria-hidden="true"><i></i><u></u></div>'+
+    (src?'<img class="ph" data-id="'+esc(id)+'" data-u="'+(user?1:0)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" src="'+esc(src)+'">':'')+(over||'')+'</div>';
+}
+function thumbHTML(id){
+  var r=BY_ID[id], src=photoSrc(id), user=!!S.photos[id];
+  return '<span class="thumb"><span class="cover c-'+coverKey(r)+'" aria-hidden="true" style="position:absolute;inset:0;display:block"></span>'+
+    (src?'<img class="ph" data-id="'+esc(id)+'" data-u="'+(user?1:0)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" src="'+esc(src)+'">':'')+'</span>';
+}
+function hydrate(root){
+  $$('img.ph',root||document).forEach(function(im){
+    if(im.complete){ if(im.naturalWidth>0) im.classList.add('in'); else dropImg(im); }
+  });
+}
+function dropImg(im){ if(im.dataset.u!=='1'&&im.dataset.id) failed[im.dataset.id]=1; if(im.parentNode) im.parentNode.removeChild(im); }
+document.addEventListener('load',function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&t.classList.contains('ph')) t.classList.add('in'); },true);
+document.addEventListener('error',function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&t.classList.contains('ph')) dropImg(t); },true);
+
+/* ---------- toast + pill ---------- */
+var toastT=null;
+function toast(msg,undo){
+  var el=$('#toast');
+  el.innerHTML='<div class="t"><span>'+esc(msg)+'</span>'+(undo?'<button data-act="undo">Undo</button>':'')+'</div>';
+  toast.undo=undo||null;
+  var t=$('.t',el); requestAnimationFrame(function(){requestAnimationFrame(function(){t.classList.add('on');});});
+  clearTimeout(toastT); toastT=setTimeout(function(){ t.classList.remove('on'); toast.undo=null; },undo?7000:2600);
+}
+function renderPill(){
+  var ids=Object.keys(S.week), p=$('#pill'), show=view==='browse'&&ids.length>0&&!sheetOpen;
+  if(show){
+    var port=ids.reduce(function(a,id){return a+S.week[id];},0);
+    p.innerHTML='<button data-act="tab" data-v="week"><span>'+ids.length+' picked &middot; '+port+' portions</span><span class="go">View week</span></button>';
+  }
+  p.classList.toggle('on',show);
+  document.body.classList.toggle('has-pill',show);
+}
+
+/* ---------- sheet + dialog ---------- */
+var view='browse', sheetOpen=false, dialogOpen=false, sheetKind=null, curId=null, pickCtx=null, draft={};
+function lock(){ document.documentElement.classList.toggle('locked',sheetOpen||dialogOpen); }
+function openSheet(kind,title){
+  sheetKind=kind; sheetOpen=true; $('#shTitle').textContent=title;
+  var s=$('#sheet'); s.classList.add('open'); s.setAttribute('aria-hidden','false'); lock(); renderPill();
+}
+function closeSheet(){
+  var s=$('#sheet'); s.classList.remove('open'); s.setAttribute('aria-hidden','true');
+  sheetOpen=false; sheetKind=null; embedOn={}; lock(); renderPill();
+}
+function hideToast(){ clearTimeout(toastT); var t=$('#toast .t'); if(t) t.classList.remove('on'); toast.undo=null; }
+function openDialog(html){
+  hideToast(); $('#dlgBody').innerHTML=html; var d=$('#dialog'); d.classList.add('open'); d.setAttribute('aria-hidden','false');
+  $('#scrim').classList.add('on'); dialogOpen=true; lock();
+}
+function closeDialog(){
+  var d=$('#dialog'); d.classList.remove('open'); d.setAttribute('aria-hidden','true');
+  $('#scrim').classList.remove('on'); dialogOpen=false; lock();
+}
+function closeAll(){ closeDialog(); closeSheet(); document.documentElement.classList.remove('locked'); }
+
+/* ---------- browse ---------- */
+var CATS=['All','Chicken','Beef','Fish','Veg','Pasta','Freezer','High protein'];
+var SORTS=[['default','Curated'],['protein','Protein density'],['kcal','Lightest first'],['az','A to Z']];
+var filter='All', query='';
+function matchFilter(r){
+  if(filter==='All') return true;
+  if(filter==='Freezer') return r.freezer===true||r.freezer==='partial';
+  if(filter==='High protein') return pDens(r)>=6.3;
+  return r.cat.toLowerCase().indexOf(filter.toLowerCase())>-1;
+}
+function sortLabel(){ for(var i=0;i<SORTS.length;i++) if(SORTS[i][0]===S.sort) return SORTS[i][1]; return 'Curated'; }
+function visible(){
+  var L=RECIPES.filter(matchFilter);
+  var toks=query.toLowerCase().split(/\s+/).filter(Boolean);
+  if(toks.length) L=L.filter(function(r){ var t=(r.name+' '+r.cat+' '+r.ingredients.map(function(i){return i.name;}).join(' ')).toLowerCase(); return toks.every(function(k){return t.indexOf(k)>-1;}); });
+  if(S.sort==='protein') L.sort(function(a,b){return pDens(b)-pDens(a);});
+  else if(S.sort==='kcal') L.sort(function(a,b){return a.macros.kcal-b.macros.kcal;});
+  else if(S.sort==='az') L.sort(function(a,b){return a.name.localeCompare(b.name);});
+  return L;
+}
+function cardHTML(r){
+  var w=S.week[r.id]!=null, fz=fzInfo(r), m=r.macros, hi=pDens(r)>=6.3, link=linkFor(r.id);
+  var over='<span class="tag '+fz.c+'">'+fz.t+'</span>'+
+    (link?'<button class="watch" data-act="watch" data-id="'+esc(r.id)+'" aria-label="Watch video">'+ic('play',12)+'Video</button>':'')+
+    '<span class="pchip'+(hi?' hi':'')+'">'+pDens(r).toFixed(1)+'g P / 100 kcal</span>'+
+    '<button class="fab'+(w?' on':'')+'" data-act="toggle" data-id="'+esc(r.id)+'" aria-label="'+(w?'Remove from this week':'Add to this week')+'">'+ic(w?'check':'plus',24)+'</button>';
+  return '<article class="card" data-act="open" data-id="'+esc(r.id)+'">'+mediaHTML(r.id,'',over)+
+    '<div class="cb"><div class="eyebrow">'+esc(r.cat)+(r.prep?' &middot; '+esc(r.prep):'')+'</div><h3>'+esc(r.name)+'</h3>'+
+    '<div class="stats"><b>'+m.kcal+'</b> kcal &middot; <b>'+m.protein+'g</b> protein &middot; serves '+r.serves+'</div></div></article>';
+}
+function renderBrowse(){
+  $('#chips').innerHTML=CATS.map(function(c){return '<button class="chip'+(c===filter?' on':'')+'" data-act="filter" data-c="'+esc(c)+'">'+esc(c)+'</button>';}).join('');
+  var L=visible();
+  $('#count').textContent=L.length+' recipe'+(L.length===1?'':'s')+(S.sort!=='default'?' · '+sortLabel():'');
+  $('#grid').innerHTML=L.length?L.map(cardHTML).join(''):'<div class="empty" style="grid-column:1/-1"><h3>No matches</h3><p>Try another word, or clear the search.</p><button class="btn soft" data-act="clearFilter">Clear search</button></div>';
+  hydrate($('#grid'));
+}
+
+/* ---------- instagram embed (official /embed/ page, nothing is copied) ---------- */
+var embedOn={};
+function igCode(u){ var m=/instagram\.com\/(?:reel|reels|p|tv)\/([A-Za-z0-9_-]+)/.exec(u||''); return m?m[1]:null; }
+function videoHTML(id){
+  var code=igCode(linkFor(id)); if(!code) return '';
+  if(embedOn[id]) return '<div class="sh">Video</div><div class="embed"><iframe src="https://www.instagram.com/reel/'+code+'/embed/" title="Instagram video" loading="lazy" allowfullscreen scrolling="no"></iframe></div><p class="cap" style="margin:10px 2px 0">Plays from Instagram. If it will not load, use Watch the video above.</p>';
+  return '<div class="sh">Video</div><button class="vposter" data-act="loadEmbed" data-id="'+esc(id)+'"><span class="vp">'+ic('play',22)+'</span><span>Preview the video here<small>Loads from Instagram when you tap</small></span></button>';
+}
+
+/* ---------- recipe detail ---------- */
+function openRecipe(id,keep){
+  var r=BY_ID[id]; if(!r) return; curId=id;
+  var inW=S.week[id]!=null, port=inW?S.week[id]:(draft[id]||r.serves), sc=port/r.serves;
+  var m=r.macros, st=storageFor(r), link=linkFor(id), user=!!S.photos[id], fz=fzInfo(r), hi=pDens(r)>=6.3;
+  var ing='', last=null;
+  r.ingredients.forEach(function(it){
+    var sec=it.section||''; if(sec!==last){ if(sec) ing+='<div class="ig">'+esc(sec)+'</div>'; last=sec; }
+    ing+='<div class="ing"><span class="n">'+esc(it.name)+(it.alt?'<span class="alt">'+esc(it.alt)+'</span>':'')+'</span><span class="q">'+esc(fmtQ((it.qty||0)*sc,it.unit))+'</span></div>';
+  });
+  var over='<span class="tag '+fz.c+'">'+fz.t+'</span><span class="pchip'+(hi?' hi':'')+'">'+pDens(r).toFixed(1)+'g P / 100 kcal</span>';
+  var credit='';
+  if(user) credit='<div class="credit">Your own photo.</div>';
+  else if(PHOTOS[id]&&!failed[id]) credit='<div class="credit">Photo: Wikimedia Commons, a similar dish. <a href="https://commons.wikimedia.org/wiki/File:'+esc(PHOTOS[id])+'" target="_blank" rel="noopener">Author and licence</a></div>';
+  else credit='<div class="credit">No photo yet. Add your own below.</div>';
+  var html=mediaHTML(id,'hero',over)+credit+
+    '<div class="meta"><span class="mchip">'+esc(r.cat)+'</span>'+(r.prep?'<span class="mchip">'+esc(r.prep)+'</span>':'')+'<span class="mchip">Serves '+r.serves+'</span>'+(S.edits[id]?'<span class="mchip">Edited by you</span>':'')+'</div>'+
+    (r.blurb?'<p class="cap" style="margin:0 2px 16px;font-size:16px;color:var(--ink2)">'+esc(r.blurb)+'</p>':'')+
+    '<div class="pc"><div><b>Portions</b><small>'+(inW?'In your week':'Recipe serves '+r.serves)+'</small></div>'+
+      '<div class="stepper"><button data-act="sstep" data-d="-1" aria-label="Fewer portions">'+ic('minus',18)+'</button><span>'+port+'</span><button data-act="sstep" data-d="1" aria-label="More portions">'+ic('plus',18)+'</button></div></div>'+
+    '<div class="stack">'+
+      (inW?'<button class="btn danger" data-act="toggle" data-id="'+esc(id)+'">Remove from this week</button>'
+          :'<button class="btn acc" data-act="toggle" data-id="'+esc(id)+'">'+ic('plus',20)+' Add to this week</button>')+
+      (link?'<button class="btn" data-act="watch" data-id="'+esc(id)+'">'+ic('play',16)+' Watch the video</button>':'')+
+      '<div class="row2"><button class="btn soft sm" data-act="photo" data-id="'+esc(id)+'">'+ic('cam',18)+(user?'Change photo':'Add my photo')+'</button>'+
+      (user?'<button class="btn soft sm" data-act="rmPhoto" data-id="'+esc(id)+'">Remove my photo</button>':'')+
+      '<button class="btn soft sm" data-act="editLink" data-id="'+esc(id)+'">'+(link?'Edit video link':'Add video link')+'</button>'+
+      '<button class="btn soft sm" data-act="editRecipe" data-id="'+esc(id)+'">Edit recipe</button></div>'+
+    '</div>'+videoHTML(id)+
+    '<div class="sh">Per portion</div><div class="mt"><div><b>'+m.kcal+'</b><span>kcal</span></div><div><b>'+m.protein+'g</b><span>protein</span></div><div><b>'+m.carbs+'g</b><span>carbs</span></div><div><b>'+m.fat+'g</b><span>fat</span></div></div>'+
+    '<div class="sh">Ingredients &middot; for '+port+' portion'+(port===1?'':'s')+'</div>'+ing+
+    ((r.steps||[]).length?'<div class="sh">Method</div><ol class="steps">'+r.steps.map(function(s){return '<li><span>'+esc(s)+'</span></li>';}).join('')+'</ol>':'')+
+    (r.weighing?'<div class="sh">Portioning</div><div class="note">'+esc(r.weighing)+'</div>':'')+
+    '<div class="sh">Keeps for</div><div class="st"><div><span>Fridge</span><b>'+st.fridge+'</b></div><div><span>Freezer</span><b>'+st.freezer+'</b></div><div><span>Reheat</span><b>Once</b></div></div>'+
+    (st.rice?'<p class="cap" style="margin:12px 2px 0">Rice rule: cool within 1 hour, fridge for one day at most, reheat once until steaming. Source: FSA.</p>':'')+
+    ((r.tips||[]).length?'<div class="sh">Notes</div><ul class="tips">'+r.tips.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul>':'');
+  var sc0=$('#sheet').scrollTop;
+  $('#shBody').innerHTML=html;
+  if(!sheetOpen||sheetKind!=='recipe') openSheet('recipe',r.name); else $('#shTitle').textContent=r.name;
+  $('#sheet').scrollTop=keep?sc0:0;
+  hydrate($('#shBody'));
+}
+
+/* ---------- recipe editor: edits live on this phone and override the built-in recipe ---------- */
+var UNITS={g:'g',gram:'g',grams:'g',kg:'kg',ml:'ml',l:'l',tsp:'tsp',tbsp:'tbsp',clove:'cloves',cloves:'cloves'};
+function pick(r){
+  return {name:r.name,cat:r.cat,serves:r.serves,prep:r.prep||'',blurb:r.blurb||'',freezer:r.freezer,
+    macros:{kcal:r.macros.kcal,protein:r.macros.protein,carbs:r.macros.carbs,fat:r.macros.fat},
+    ingredients:r.ingredients.map(function(i){return {name:i.name,unit:i.unit||'',qty:i.qty||0,section:i.section||'',alt:i.alt||null};}),
+    steps:(r.steps||[]).slice(),weighing:r.weighing||'',tips:(r.tips||[]).slice()};
+}
+function validEdit(e){
+  if(!e||typeof e!=='object') return false;
+  if(typeof e.name!=='string'||!e.name.trim()||!(e.serves>=1)) return false;
+  var m=e.macros; if(!m||!(m.kcal>0)||!(m.protein>=0)||!(m.carbs>=0)||!(m.fat>=0)) return false;
+  if(!Array.isArray(e.ingredients)||!e.ingredients.length||!Array.isArray(e.steps)||!Array.isArray(e.tips)) return false;
+  return e.ingredients.every(function(i){return i&&typeof i.name==='string'&&typeof i.qty==='number'&&typeof i.unit==='string';});
+}
+function applyEdits(){
+  RECIPES.forEach(function(r,i){
+    var b=JSON.parse(JSON.stringify(ORIG[i])), e=S.edits&&S.edits[b.id];
+    if(e) Object.keys(e).forEach(function(k){ b[k]=e[k]; });
+    RECIPES[i]=b; BY_ID[b.id]=b;
+  });
+}
+function parseQty(t){
+  var m, fr={'¼':0.25,'½':0.5,'¾':0.75};
+  if(/^\d+(?:\.\d+)?$/.test(t)) return parseFloat(t);
+  if((m=/^(\d+)\/(\d+)$/.exec(t))) return +m[2]>0?(+m[1])/(+m[2]):null;
+  if(fr[t]!=null) return fr[t];
+  if((m=/^(\d+)([¼½¾])$/.exec(t))) return +m[1]+fr[m[2]];
+  return null;
+}
+function ingToText(list){
+  var out=[], last='';
+  list.forEach(function(it){
+    var sec=it.section||'';
+    if(sec!==last){ out.push(sec?'# '+sec:'#'); last=sec; }
+    out.push((it.qty?it.qty+' '+(it.unit?it.unit+' ':''):'')+it.name+(it.alt?' | '+it.alt:''));
+  });
+  return out.join('\n');
+}
+function textToIng(text){
+  var out=[], sec='';
+  String(text).split('\n').forEach(function(raw){
+    var line=raw.trim(); if(!line) return;
+    if(line.charAt(0)==='#'){ sec=line.slice(1).trim(); return; }
+    var qty=0, unit='', rest=line, m=/^(\S+)\s+(.+)$/.exec(line);
+    if(m){
+      var q=parseQty(m[1]);
+      if(q!=null){
+        qty=q; rest=m[2];
+        var m2=/^(\S+)\s+(.+)$/.exec(rest);
+        if(m2&&UNITS[m2[1].toLowerCase()]){ unit=UNITS[m2[1].toLowerCase()]; rest=m2[2]; }
+      }
+    }
+    if(unit==='kg'){ unit='g'; qty*=1000; } else if(unit==='l'){ unit='ml'; qty*=1000; }
+    var alt=null, bar=rest.indexOf('|');
+    if(bar>-1){ alt=rest.slice(bar+1).trim()||null; rest=rest.slice(0,bar); }
+    rest=rest.trim(); if(!rest) return;
+    out.push({name:rest,unit:unit,qty:qty,section:sec,alt:alt});
+  });
+  return out;
+}
+function lines(t){ return String(t).split('\n').map(function(s){return s.trim();}).filter(Boolean); }
+function fld(id,label,inner,hint){ return '<label for="'+id+'">'+label+'</label>'+inner+(hint?'<p class="hint">'+hint+'</p>':''); }
+function openEdit(id){
+  var r=BY_ID[id]; if(!r) return; curId=id; var m=r.macros, p=pick(r);
+  var fzv=r.freezer===true?'true':(r.freezer==='partial'?'partial':'false');
+  var html='<div class="edit"><p class="cap" style="margin:0 2px">Changes save on this phone and replace the built-in version of this recipe. You can reset to the original at any time.</p>'+
+    fld('e-name','Name','<input id="e-name" type="text" autocomplete="off" value="'+esc(r.name)+'">')+
+    '<div class="g2"><div>'+fld('e-serves','Serves','<input id="e-serves" type="number" inputmode="numeric" min="1" max="24" step="1" value="'+esc(r.serves)+'">')+'</div><div>'+fld('e-prep','Prep time','<input id="e-prep" type="text" autocomplete="off" value="'+esc(r.prep||'')+'">')+'</div></div>'+
+    '<div class="g2"><div>'+fld('e-cat','Category','<input id="e-cat" type="text" autocomplete="off" value="'+esc(r.cat)+'">')+'</div><div>'+fld('e-fz','Freezer','<select id="e-fz"><option value="true"'+(fzv==='true'?' selected':'')+'>Freezes well</option><option value="partial"'+(fzv==='partial'?' selected':'')+'>Part freezes</option><option value="false"'+(fzv==='false'?' selected':'')+'>Eat fresh</option></select>')+'</div></div>'+
+    fld('e-blurb','Short description','<textarea id="e-blurb" rows="2">'+esc(r.blurb||'')+'</textarea>')+
+    '<div class="sh">Per portion</div><div class="g4">'+
+      [['e-kcal','kcal',m.kcal],['e-pro','Protein g',m.protein],['e-carb','Carbs g',m.carbs],['e-fat','Fat g',m.fat]].map(function(f){return '<div>'+fld(f[0],f[1],'<input id="'+f[0]+'" type="number" inputmode="decimal" min="0" step="1" value="'+esc(f[2])+'">')+'</div>';}).join('')+'</div>'+
+    '<div class="sh">Ingredients</div>'+
+    fld('e-ing','One per line','<textarea id="e-ing" class="mono" rows="14" spellcheck="false" autocapitalize="off">'+esc(ingToText(p.ingredients))+'</textarea>','Format: amount, unit, name. Units: g, kg, ml, l, tsp, tbsp, cloves. Examples: <b>260 g Trout fillets</b>, <b>2 Ripe mangoes</b>, <b>1 tbsp Maple syrup | honey</b> (after the bar is an alternative). A line starting with # is a heading. Amounts are for the number served above.')+
+    '<div class="sh">Method</div>'+fld('e-steps','One step per line','<textarea id="e-steps" rows="9">'+esc(p.steps.join('\n'))+'</textarea>')+
+    '<div class="sh">Portioning and notes</div>'+fld('e-weigh','Portioning','<textarea id="e-weigh" rows="3">'+esc(p.weighing)+'</textarea>')+
+    fld('e-tips','Notes, one per line','<textarea id="e-tips" rows="4">'+esc(p.tips.join('\n'))+'</textarea>')+
+    '<div class="stack btns"><button class="btn acc" data-act="saveEdit">Save changes</button><button class="btn soft" data-act="cancelEdit">Cancel</button>'+(S.edits[id]?'<button class="btn danger" data-act="resetEdit">Reset to original recipe</button>':'')+'</div></div>';
+  $('#shBody').innerHTML=html;
+  if(!sheetOpen||sheetKind!=='edit') openSheet('edit','Edit recipe'); else $('#shTitle').textContent='Edit recipe';
+  $('#sheet').scrollTop=0;
+}
+function saveEdit(){
+  var id=curId, g=function(s){return $(s).value;}, n=function(s){return Math.round(parseFloat(g(s)));};
+  var name=g('#e-name').trim(), serves=parseInt(g('#e-serves'),10), kcal=n('#e-kcal'), pro=n('#e-pro'), carb=n('#e-carb'), fat=n('#e-fat');
+  if(!name){ toast('Give the recipe a name'); return; }
+  if(!(serves>=1&&serves<=24)){ toast('Serves must be between 1 and 24'); return; }
+  if(!(kcal>0)||!(pro>=0)||!(carb>=0)||!(fat>=0)){ toast('Check the calories and macros'); return; }
+  var ing=textToIng(g('#e-ing')); if(!ing.length){ toast('Add at least one ingredient'); return; }
+  var fz=g('#e-fz'); fz=fz==='true'?true:(fz==='partial'?'partial':false);
+  var o=pick(ORIG[RECIPES.findIndex(function(x){return x.id===id;})]);
+  var e={name:name,cat:g('#e-cat').trim()||o.cat,serves:serves,prep:g('#e-prep').trim(),blurb:g('#e-blurb').trim(),freezer:fz,
+    macros:{kcal:kcal,protein:pro,carbs:carb,fat:fat},ingredients:ing,steps:lines(g('#e-steps')),weighing:g('#e-weigh').trim(),tips:lines(g('#e-tips'))};
+  var snap=snapshot();
+  if(JSON.stringify(e)===JSON.stringify(o)) delete S.edits[id]; else S.edits[id]=e;
+  save(); applyEdits(); renderView(view); openRecipe(id); renderBadge(); toast('Saved on this phone',function(){restoreSnap(snap);});
+}
+function resetEdit(){
+  var id=curId, snap=snapshot(); delete S.edits[id]; save(); applyEdits(); renderView(view); openRecipe(id); renderBadge();
+  toast('Back to the original recipe',function(){restoreSnap(snap);});
+}
+
+/* ---------- week ---------- */
+function plannedPortions(id){
+  var n=0; DAYS.forEach(function(d){ ['lunch','dinner'].forEach(function(w){ var s=S.plan[d][w]; if(s.dish===id) n+=(s.wife?2:1); }); }); return n;
+}
+function toggleWeek(id){
+  var r=BY_ID[id]; if(!r) return;
+  if(S.week[id]!=null){
+    var snap=snapshot(), cleared=0;
+    delete S.week[id];
+    DAYS.forEach(function(d){ ['lunch','dinner'].forEach(function(w){ if(S.plan[d][w].dish===id){ S.plan[d][w]=blankSlot(); cleared++; } }); });
+    save(); refresh();
+    toast(cleared?'Removed, and cleared '+cleared+' plan slot'+(cleared>1?'s':''):'Removed from this week',function(){restoreSnap(snap);});
+  } else { S.week[id]=r.serves; save(); refresh(); }
+}
+function buildPrep(ids){
+  var rs=ids.map(function(id){return BY_ID[id];});
+  var oven=rs.filter(function(r){return /bake|roast|air-fry|oven|grill/i.test(r.steps.join(' '));}).map(function(r){return r.name;});
+  var rice=rs.filter(function(r){return storageFor(r).rice;}).map(function(r){return r.name;});
+  var fresh=rs.filter(function(r){return r.freezer===false;}).map(function(r){return r.name;});
+  var out=['Mix every cold sauce and dressing first and bottle them. They keep the week and clear your bench.'];
+  if(rice.length) out.push('Get rice on early, then spread it thin to cool within 1 hour for: '+rice.join(', ')+'. Rice is the tightest-timed part.');
+  if(oven.length) out.push('Batch the oven and air-fryer work back to back at about 190-200C: '+oven.join(', ')+'.');
+  if(fresh.length) out.push('Leave these as fresh-cook nights, do not box them: '+fresh.join(', ')+'.');
+  out.push('Cool everything, then portion by weight (total divided by portions) before it hits the fridge or freezer.');
+  out.push('Label freezer boxes with the date. Anything not frozen: eat within 2 days.');
+  return out;
+}
+function renderWeek(){
+  var ids=Object.keys(S.week), el=$('#v-week');
+  var hd='<header class="hd"><div><h1>This week</h1><p>'+(ids.length?ids.length+' recipe'+(ids.length>1?'s':'')+' picked':'Nothing picked yet')+'</p></div></header>';
+  if(!ids.length){ el.innerHTML=hd+'<div class="empty"><h3>Pick what you fancy</h3><p>Tap the + on any recipe. Your shopping list builds itself, scaled to your portions.</p><button class="btn acc" data-act="tab" data-v="browse">Browse recipes</button></div>'; return; }
+  var tot={kcal:0,protein:0,carbs:0,fat:0}, meals=0;
+  ids.forEach(function(id){ var r=BY_ID[id],p=S.week[id]; tot.kcal+=r.macros.kcal*p; tot.protein+=r.macros.protein*p; tot.carbs+=r.macros.carbs*p; tot.fat+=r.macros.fat*p; meals+=p; });
+  function avg(k){return Math.round(tot[k]/meals);}
+  var html=hd+'<div class="sum"><h3>'+meals+' portions in total</h3><p>Average per portion across your picks</p><div class="mt"><div><b>'+avg('kcal')+'</b><span>kcal</span></div><div><b>'+avg('protein')+'g</b><span>protein</span></div><div><b>'+avg('carbs')+'g</b><span>carbs</span></div><div><b>'+avg('fat')+'g</b><span>fat</span></div></div></div>';
+  html+='<div class="sh">Your picks</div>';
+  ids.forEach(function(id){
+    var r=BY_ID[id], p=S.week[id], n=plannedPortions(id);
+    html+='<div class="wk">'+thumbHTML(id)+'<div class="wk-i" data-act="open" data-id="'+esc(id)+'"><b>'+esc(r.name)+'</b><small>'+r.macros.kcal+' kcal &middot; '+r.macros.protein+'g protein each</small>'+
+      (n?'<small class="need">Plan needs '+n+(n!==p?'<button class="match" data-act="match" data-id="'+esc(id)+'">Match</button>':' &#10003;')+'</small>':'')+'</div>'+
+      '<div class="wk-r"><div class="stepper"><button data-act="wstep" data-d="-1" data-id="'+esc(id)+'" aria-label="Fewer">'+ic('minus',18)+'</button><span>'+p+'</span><button data-act="wstep" data-d="1" data-id="'+esc(id)+'" aria-label="More">'+ic('plus',18)+'</button></div>'+
+      '<button class="link" data-act="toggle" data-id="'+esc(id)+'">Remove</button></div></div>';
+  });
+  html+='<details class="prep" open><summary>Sunday prep game plan'+ic('down',22)+'</summary>'+buildPrep(ids).map(function(s,i){return '<div class="pstep"><i>'+(i+1)+'</i><span>'+esc(s)+'</span></div>';}).join('')+'</details>';
+  html+='<div class="stack" style="margin-top:18px"><button class="btn acc" data-act="tab" data-v="shop">'+ic('basket',20)+' Open shopping list</button><button class="btn soft" data-act="tab" data-v="plan">'+ic('cal',20)+' Plan the days</button><button class="btn danger" data-act="newWeek">Finished? Start a new week</button></div>';
+  el.innerHTML=html; hydrate(el);
+}
+
+/* ---------- plan ---------- */
+function todayIdx(){ return (new Date().getDay()+6)%7; }
+function renderPlan(){
+  var el=$('#v-plan'), filled=0;
+  DAYS.forEach(function(d){ ['lunch','dinner'].forEach(function(w){ if(S.plan[d][w].dish) filled++; }); });
+  var html='<header class="hd"><div><h1>Plan</h1><p>'+filled+' of 14 meals planned</p></div><button class="iconbtn round" data-act="planMenu" aria-label="More options">'+ic('dots',22)+'</button></header>';
+  DAYS.forEach(function(d,di){
+    var kc=0,pr=0,any=false;
+    ['lunch','dinner'].forEach(function(w){ var s=S.plan[d][w]; if(s.dish){ any=true; kc+=BY_ID[s.dish].macros.kcal; pr+=BY_ID[s.dish].macros.protein; } });
+    html+='<div class="day"><div class="day-h"><span><b>'+d+'</b>'+(di===todayIdx()?'<span class="today">Today</span>':'')+'</span>'+(any?'<span class="day-t">'+kc.toLocaleString('en-GB')+' kcal &middot; '+pr+'g protein</span>':'')+'</div>';
+    ['lunch','dinner'].forEach(function(w){
+      var s=S.plan[d][w], r=s.dish?BY_ID[s.dish]:null, label=w==='lunch'?'Lunch':'Dinner';
+      html+='<div class="slot"><button class="slot-main" data-act="pick" data-day="'+d+'" data-slot="'+w+'"><span class="slot-tag">'+label+'</span>'+
+        (r?thumbHTML(r.id)+'<span class="slot-txt"><b>'+esc(r.name)+'</b><small>'+r.macros.kcal+' kcal &middot; '+r.macros.protein+'g protein</small></span>'
+          :'<span class="thumb empty">'+ic('plus',22)+'</span><span class="slot-empty">Add a meal</span>')+
+        '<span class="chev">'+ic('right',18)+'</span></button>';
+      if(r) html+='<div class="slot-sub"><button class="wf" data-act="wife" data-day="'+d+'" data-slot="'+w+'" role="switch" aria-checked="'+(s.wife?'true':'false')+'"><span class="sw'+(s.wife?' on':'')+'"></span>Wife eating too <em>'+(s.wife?'2 portions':'1 portion')+'</em></button><button class="link" data-act="clearSlot" data-day="'+d+'" data-slot="'+w+'">Clear</button></div>';
+      html+='</div>';
+    });
+    html+='</div>';
+  });
+  html+='<p class="hint">Choosing a meal adds the recipe to This week, so its ingredients land on your shopping list. Dinner defaults to two portions, lunch to one.</p>';
+  el.innerHTML=html; hydrate(el);
+}
+function openPicker(day,which,q){
+  pickCtx={day:day,which:which};
+  var cur=S.plan[day][which].dish, toks=(q||'').toLowerCase().split(/\s+/).filter(Boolean);
+  function match(r){ var t=(r.name+' '+r.cat+' '+r.ingredients.map(function(i){return i.name;}).join(' ')).toLowerCase(); return toks.every(function(k){return t.indexOf(k)>-1;}); }
+  function row(r){ return '<button class="prow" data-act="assign" data-id="'+esc(r.id)+'">'+thumbHTML(r.id)+'<span style="flex:1;min-width:0"><b>'+esc(r.name)+'</b><small>'+r.macros.kcal+' kcal &middot; '+r.macros.protein+'g protein &middot; serves '+r.serves+'</small></span>'+(cur===r.id?'<span class="ok">'+ic('check',22)+'</span>':'')+'</button>'; }
+  var inW=RECIPES.filter(function(r){return S.week[r.id]!=null&&match(r);}), rest=RECIPES.filter(function(r){return S.week[r.id]==null&&match(r);});
+  var list='';
+  if(inW.length) list+='<div class="sh" style="margin-top:18px">In your week</div>'+inW.map(row).join('');
+  if(rest.length) list+='<div class="sh" style="margin-top:18px">'+(inW.length?'All other recipes':'All recipes')+'</div>'+rest.map(row).join('');
+  if(!inW.length&&!rest.length) list='<div class="empty"><h3>No matches</h3><p>Try another word.</p></div>';
+  if(sheetOpen&&sheetKind==='picker'){ $('#pickList').innerHTML=list; hydrate($('#pickList')); return; }
+  $('#shBody').innerHTML=(cur?'<button class="btn danger" style="margin-top:14px" data-act="clearSlot" data-day="'+day+'" data-slot="'+which+'" data-close="1">Clear this slot</button>':'')+
+    '<div class="psearch"><label class="sbox"><span>'+ic('search',20)+'</span><input id="pq" type="search" placeholder="Search recipes" autocomplete="off" aria-label="Search recipes"></label></div><div id="pickList">'+list+'</div>';
+  openSheet('picker',day+' '+(which==='lunch'?'lunch':'dinner')); $('#sheet').scrollTop=0; hydrate($('#shBody'));
+}
+function assign(id){
+  var c=pickCtx; if(!c) return; var s=S.plan[c.day][c.which], was=!s.dish;
+  s.dish=id; if(was) s.wife=(c.which==='dinner');
+  if(S.week[id]==null) S.week[id]=BY_ID[id].serves;
+  save(); closeSheet(); refresh();
+}
+function fillDinners(){
+  var picks=Object.keys(S.week); closeDialog();
+  if(!picks.length){ toast('Pick some recipes first'); return; }
+  var snap=snapshot(), i=0, n=0;
+  DAYS.forEach(function(d){ var s=S.plan[d].dinner; if(!s.dish){ s.dish=picks[i%picks.length]; s.wife=true; i++; n++; } });
+  if(!n){ toast('Every dinner already has a meal'); return; }
+  save(); refresh(); toast('Filled '+n+' empty dinner'+(n>1?'s':''),function(){restoreSnap(snap);});
+}
+function clearPlan(){
+  var snap=snapshot(); closeDialog();
+  DAYS.forEach(function(d){ S.plan[d]={lunch:blankSlot(),dinner:blankSlot()}; });
+  save(); refresh(); toast('Plan cleared',function(){restoreSnap(snap);});
+}
+
+/* ---------- shopping ---------- */
+var UNIT_W={g:1,kg:1000}, UNIT_V={ml:1,l:1000,tsp:4.92892,tbsp:14.7868,cup:240,fl_oz:29.5735};
+function unitClass(u){ if(UNIT_W[u]!=null) return 'w'; if(UNIT_V[u]!=null) return 'v'; return 'c'; }
+function toBase(q,u){ if(UNIT_W[u]!=null) return q*UNIT_W[u]; if(UNIT_V[u]!=null) return q*UNIT_V[u]; return q; }
+var MASS_PER_ML={'butter':14.2/14.7868,'honey':21/14.7868}; /* USDA household weights: 14.2 g and 21 g per tbsp */
+var STRIP_TRAIL=/,\s*(chopped|sliced|thin(?:ly)?\s*sliced|fine(?:ly)?\s*chopped|small dice|small cubes|diced|minced|grated|crushed|deseeded|beaten|white part|green part|halved|quartered|cut|trimmed|peeled|skins? removed|spiralised|torn|crumbled|drained|to serve|to cook|for serving|for cooking|juiced|zested)\b.*$/i;
+var STRIP_LEAD=/^(large|small|baby|fresh)\s+/i;
+var CANON=[
+ [/^light butter$|^unsalted butter$|^butter$/i,'Butter'],
+ [/^light mayo$|^mayonnaise$|^mayo$/i,'Mayonnaise'],
+ [/^light soy$|^light soy sauce$|^soy sauce$/i,'Soy sauce'],
+ [/^dark soy$|^dark soy sauce$/i,'Dark soy sauce'],
+ [/^sesame oil$|^toasted sesame oil$/i,'Toasted sesame oil'],
+ [/^low-fat yogurt$|^plain greek yogurt$|^0% greek yogurt$|^greek yogurt$/i,'Greek yogurt'],
+ [/^sour cream$|^light sour cream$/i,'Sour cream'],
+ [/^spring onions?$/i,'Spring onions'],
+ [/^garlic(?: cloves?)?$/i,'Garlic'],
+ [/^coriander$/i,'Coriander'],[/^cucumbers?$/i,'Cucumber'],[/^parsley$/i,'Parsley'],
+ [/^onions?$/i,'Onion'],[/^red onions?$/i,'Red onion'],
+ [/^tomatoes$|^tomato$|^diced tomatoes$/i,'Tomatoes'],
+ [/^limes?(?:, juice of)?$/i,'Lime'],[/^lemons?$/i,'Lemon'],
+ [/^olive oil(?: or spray)?$/i,'Olive oil']
+];
+function canonicalise(raw){
+  var n=String(raw).replace(/\(.*?\)/g,'').trim();
+  n=n.replace(STRIP_TRAIL,'').trim(); n=n.replace(STRIP_LEAD,'').trim();
+  for(var i=0;i<CANON.length;i++){ if(CANON[i][0].test(n)) return CANON[i][1]; }
+  return n;
+}
+var AISLE_RULES=[
+ ['Frozen',/frozen|fish finger|\bpeas\b|sweetcorn/i],
+ ['Bakery',/tortilla|\bwraps?\b|bread(?!crumb)|\bbuns?\b|brioche|\brolls?\b|pitta|ciabatta|naan|bagel/i],
+ ['Spices & seasoning',/black pepper|white pepper|\bsalt\b|paprika|cumin|oregano|chilli powder|chilli flakes|chili|garlic (?:powder|granules)|onion powder|granules|seasoning|sumac|turmeric|cinnamon|sesame seeds?\b/i],
+ ['Oils, sauces & condiments',/\boil\b|vinegar|\bsoy\b|sauce|worcester|honey|sriracha|gochujang|harissa|miso|nduja|tahini|ketchup|mustard|syrup|maple|mayo|puree|purée|paste|shaoxing|wine|dressing/i],
+ ['Store cupboard',/tinned|passata|chickpea|\brice\b|pasta|spaghetti|rigatoni|noodle|panko|breadcrumb|cornflour|\bflour\b|stock cube|lentil|couscous|\boats\b/i],
+ ['Meat & fish',/chicken|beef|mince|salmon|trout|\bcod\b|haddock|mackerel|sea bass|plaice|pollock|sausage|pork|steak|sirloin|rump|turkey|bacon|lamb|duck|prawn|fish|tuna|thigh|breast/i],
+ ['Fruit & veg',/onion|shallot|garlic|mushroom|carrot|potato|cucumber|tomato|cabbage|spinach|avocado|jalapeno|jalapeño|lemon|lime|coriander|parsley|chives|basil|ginger|broccoli|choy|salad|gem|lettuce|pepper|chilli|celery|herb|mint|dill|courgette|aubergine/i],
+ ['Dairy & chilled',/yogurt|yoghurt|cream|butter|feta|parmesan|mozzarella|cheddar|cheese|\begg|tofu|buttermilk|milk/i]
+];
+var AISLE_ORDER=['Fruit & veg','Meat & fish','Dairy & chilled','Bakery','Store cupboard','Oils, sauces & condiments','Spices & seasoning','Frozen','Other'];
+function aisleOf(name){ for(var i=0;i<AISLE_RULES.length;i++){ if(AISLE_RULES[i][1].test(name)) return AISLE_RULES[i][0]; } return 'Other'; }
+function buildShop(){
+  var agg={};
+  Object.keys(S.week).forEach(function(id){
+    var r=BY_ID[id]; if(!r) return; var sc=S.week[id]/r.serves;
+    r.ingredients.forEach(function(it){
+      var canon=canonicalise(it.name), lc=canon.toLowerCase();
+      if(!it.qty){ var kn=lc+'|n'; var a0=agg[kn]||(agg[kn]={key:kn,name:canon,cls:'n',qty:0,spoon:false,sources:[]}); if(a0.sources.indexOf(r.name)<0) a0.sources.push(r.name); return; }
+      var cls=unitClass(it.unit), q=toBase(it.qty,it.unit)*sc, spoon=(it.unit==='tsp'||it.unit==='tbsp');
+      var m=MASS_PER_ML[lc]; if(cls==='v'&&m){ q=q*m; cls='w'; spoon=false; }
+      var k=lc+'|'+cls, a=agg[k]||(agg[k]={key:k,name:canon,cls:cls,qty:0,spoon:true,sources:[]});
+      a.qty+=q; if(!spoon) a.spoon=false; if(a.sources.indexOf(r.name)<0) a.sources.push(r.name);
+    });
+  });
+  return Object.keys(agg).map(function(k){var a=agg[k]; a.aisle=aisleOf(a.name); return a;});
+}
+function roundG(v){ return v>=100?Math.round(v/10)*10:(Math.round(v/5)*5||Math.round(v)); }
+function shopQty(a){
+  if(a.cls==='n') return '';
+  if(a.cls==='w'){ var g=roundG(a.qty); return g>=1000?(Math.round(g/50)/20)+' kg':g+' g'; }
+  if(a.cls==='v'){
+    if(a.spoon){ var tb=a.qty/14.7868; if(tb>=1) return (Math.round(tb*2)/2)+' tbsp'; return Math.max(0.5,Math.round(a.qty/4.92892*2)/2)+' tsp'; }
+    var ml=roundG(a.qty); return ml>=1000?(Math.round(ml/50)/20)+' l':ml+' ml';
+  }
+  return String(Math.max(1,Math.ceil(a.qty-0.05)));
+}
+function shopLeft(){
+  var sh=buildShop(); var left=sh.filter(function(a){return !S.have[a.key]&&!S.checked[a.key];}).length+S.manual.filter(function(m){return !m.done;}).length;
+  return left;
+}
+function renderBadge(){
+  var left=shopLeft(); var t=$('#tab-shop'); if(!t) return;
+  var b=$('.tbadge',t); if(b) b.remove();
+  if(left>0) t.insertAdjacentHTML('beforeend','<span class="tbadge">'+(left>99?'99+':left)+'</span>');
+}
+function itemRow(a){
+  var done=!!S.checked[a.key], q=shopQty(a);
+  var forTxt=a.sources.join(', ');
+  return '<div class="item'+(done?' done':'')+'" data-act="tick" data-key="'+esc(a.key)+'"><span class="tick'+(done?' on':'')+'">'+(done?ic('check',16):'')+'</span>'+
+    '<span class="it-main"><span class="it-name">'+esc(a.name)+'</span><span class="it-for">'+esc(forTxt)+'</span></span>'+
+    (q?'<span class="it-q">'+esc(q)+'</span>':'')+
+    '<button class="it-more" data-act="itemMenu" data-key="'+esc(a.key)+'" aria-label="Options for '+esc(a.name)+'">'+ic('dots',20)+'</button></div>';
+}
+var showHave=false;
+function renderShop(){
+  var el=$('#v-shop'), sh=buildShop(), ids=Object.keys(S.week);
+  var need=sh.filter(function(a){return !S.have[a.key];}), have=sh.filter(function(a){return S.have[a.key];});
+  var total=need.length+S.manual.length, done=need.filter(function(a){return S.checked[a.key];}).length+S.manual.filter(function(m){return m.done;}).length;
+  var hd='<header class="hd"><div><h1>Shopping</h1><p>'+(ids.length?ids.length+' recipe'+(ids.length>1?'s':'')+' &middot; '+total+' item'+(total===1?'':'s'):'Add recipes to build your list')+'</p></div><button class="iconbtn round" data-act="shopMenu" aria-label="More options">'+ic('dots',22)+'</button></header>';
+  var html=hd;
+  html+='<div class="addrow"><input id="addIn" type="text" placeholder="Add your own item" autocomplete="off" enterkeyhint="done" aria-label="Add your own item"><button class="btn acc" data-act="addManual">Add</button></div>';
+  if(!ids.length&&!S.manual.length){
+    html+='<div class="empty"><h3>Nothing to buy yet</h3><p>Pick recipes and the list builds itself, with matching ingredients merged into one line.</p><button class="btn acc" data-act="tab" data-v="browse">Browse recipes</button></div>';
+    el.innerHTML=html; return;
+  }
+  var pct=total?Math.round(done/total*100):0;
+  html+='<div class="prog" style="margin-top:14px"><div class="prog-t"><b>'+done+' of '+total+' bought</b><span>'+(total-done)+' to go</span></div><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  var by={}; need.forEach(function(a){(by[a.aisle]=by[a.aisle]||[]).push(a);});
+  AISLE_ORDER.forEach(function(ai){
+    if(!by[ai]) return;
+    by[ai].sort(function(x,y){ var dx=S.checked[x.key]?1:0, dy=S.checked[y.key]?1:0; return dx-dy||x.name.localeCompare(y.name); });
+    html+='<div class="aisle"><span>'+esc(ai)+'</span><span>'+by[ai].filter(function(a){return !S.checked[a.key];}).length+' left</span></div><div class="list">'+by[ai].map(itemRow).join('')+'</div>';
+  });
+  if(S.manual.length){
+    html+='<div class="aisle"><span>Added by you</span><span>'+S.manual.filter(function(m){return !m.done;}).length+' left</span></div><div class="list">'+
+      S.manual.map(function(m){ return '<div class="item'+(m.done?' done':'')+'" data-act="tickManual" data-id="'+esc(m.id)+'"><span class="tick'+(m.done?' on':'')+'">'+(m.done?ic('check',16):'')+'</span><span class="it-main"><span class="it-name">'+esc(m.name)+'</span></span><button class="it-more" data-act="delManual" data-id="'+esc(m.id)+'" aria-label="Remove '+esc(m.name)+'">'+ic('close',20)+'</button></div>'; }).join('')+'</div>';
+  }
+  if(have.length){
+    html+='<button class="fold" data-act="toggleHave"><span>Already at home</span><small>'+have.length+(showHave?' &middot; hide':' &middot; show')+'</small></button>';
+    if(showHave) html+='<div class="list" style="margin-top:10px">'+have.map(function(a){return '<div class="item" data-act="need" data-key="'+esc(a.key)+'"><span class="it-main"><span class="it-name">'+esc(a.name)+'</span><span class="it-for">Tap to add back to your list</span></span><span class="it-q">'+esc(shopQty(a))+'</span></div>';}).join('')+'</div>';
+  }
+  html+='<p class="hint">Quantities are scaled to your portions and rounded for the shop. Matching ingredients from different recipes are merged. Tap the dots on any item to mark it as already at home.</p>';
+  html+='<div class="stack" style="margin-top:18px"><button class="btn danger" data-act="newWeek">Finished? Start a new week</button></div>';
+  el.innerHTML=html;
+}
+function listText(){
+  var sh=buildShop().filter(function(a){return !S.have[a.key]&&!S.checked[a.key];}), by={};
+  sh.forEach(function(a){(by[a.aisle]=by[a.aisle]||[]).push(a);});
+  var t='SHOPPING LIST\n';
+  AISLE_ORDER.forEach(function(ai){ if(!by[ai]) return; t+='\n'+ai.toUpperCase()+'\n'; by[ai].sort(function(x,y){return x.name.localeCompare(y.name);}).forEach(function(a){ var q=shopQty(a); t+='- '+a.name+(q?' ('+q+')':'')+'\n'; }); });
+  var mm=S.manual.filter(function(m){return !m.done;});
+  if(mm.length){ t+='\nEXTRAS\n'; mm.forEach(function(m){t+='- '+m.name+'\n';}); }
+  return t;
+}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText) return navigator.clipboard.writeText(txt);
+  return new Promise(function(res,rej){ var ta=document.createElement('textarea'); ta.value=txt; ta.style.cssText='position:fixed;opacity:0;top:0;left:0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy')?res():rej(); }catch(e){rej(e);} document.body.removeChild(ta); });
+}
+
+/* ---------- guide ---------- */
+function renderGuide(){
+  var cred=Object.keys(PHOTOS).filter(function(id){return BY_ID[id];}).map(function(id){
+    return '<li><b>'+esc(BY_ID[id].name)+'</b><br><a href="https://commons.wikimedia.org/wiki/File:'+esc(PHOTOS[id])+'" target="_blank" rel="noopener">View file, author and licence</a></li>';
+  }).join('');
+  $('#v-guide').innerHTML='<header class="hd"><div><h1>Guide</h1><p>Storage, method and backup</p></div></header>'+
+  '<div class="gcard"><h4>Fridge and freezer, the short version</h4>'+
+   '<div class="grow"><span>Cool cooked food and fridge it within</span><b>1-2 hrs</b></div>'+
+   '<div class="grow"><span>Most cooked leftovers, fridge</span><b>2 days</b></div>'+
+   '<div class="grow"><span>Cooked rice, fridge</span><b>1 day</b></div>'+
+   '<div class="grow"><span>Freezer, best quality</span><b>2-3 months</b></div>'+
+   '<div class="grow"><span>Defrost in the fridge, use within</span><b>24 hrs</b></div>'+
+   '<div class="grow"><span>Reheat until</span><b>steaming, 75C+</b></div>'+
+   '<div class="grow"><span>Reheat any one portion</span><b>once only</b></div>'+
+   '<p class="src" style="margin-top:10px">Source: UK Food Standards Agency, food.gov.uk (chilling, freezing and home food fact checker).</p></div>'+
+  '<div class="gcard"><h4>The rice rule</h4><p>Rice carries <i>Bacillus cereus</i> spores that survive cooking. If cooked rice sits warm too long, the toxins that form are not destroyed by reheating. The danger is the storage gap, not the reheat.</p><p>Cool within 1 hour (spread it thin), fridge for one day at most, reheat once until steaming. To freeze rice, get it in the freezer within an hour of cooking.</p><p class="src">Source: FSA home food fact checker.</p></div>'+
+  '<div class="gcard"><h4>How to portion</h4><p>Raw meat loses roughly a quarter of its weight cooking and rice roughly doubles, so eyeballing from the pan over-serves the first boxes. Cook the batch, weigh the total finished mass, divide by the number of portions and split on the scales.</p></div>'+
+  '<div class="gcard"><h4>About the macros</h4><p>Per-portion figures are estimates from standard food-composition values (McCance and Widdowson, USDA, typical UK labels) for the calorie-driving ingredients. Trace spices are excluded. Good for tracking trends and hitting protein, not lab-exact.</p></div>'+
+  '<div class="gcard"><h4>Editing recipes</h4><p>Open any recipe and tap Edit recipe to change the name, ingredients, method, macros or notes. Edits save on this phone and flow through to your shopping list. Reset to original puts the built-in version back. Once you have edited a recipe, later app updates will not overwrite your version.</p></div>'+
+  '<div class="gcard"><h4>Backup</h4><p>Your plan, ticks and recipe edits live in this phone’s browser storage. Clearing Safari website data wipes them, so copy a backup now and then. Photos you add are not included.</p><button class="btn soft" data-act="backup">Backup and restore</button></div>'+
+  '<div class="gcard"><h4>Photo credits</h4><p class="src">Recipe photos are openly licensed pictures of similar dishes from Wikimedia Commons, not photos of these exact recipes. Licences vary; each file page shows the author and licence. Add your own photo on any recipe to replace one. Instagram videos play straight from Instagram through its own embed; nothing is copied into this app.</p><ul class="credits">'+cred+'</ul></div>';
+}
+
+/* ---------- dialogs ---------- */
+function newWeekDialog(){
+  openDialog('<h3>Start a new week?</h3><p>This clears your plan, picked recipes, shopping ticks and extra items. Your photos, video links and “at home” list stay. You can undo straight afterwards.</p><div class="dl stack"><button class="btn" data-act="doNewWeek">Start new week</button><button class="btn soft" data-act="closeDialog">Cancel</button></div>');
+}
+function doNewWeek(){
+  var snap=snapshot(); S.week={}; S.plan={}; S.checked={}; S.manual=[]; ensure(); save(); closeDialog(); go('browse'); toast('New week started',function(){restoreSnap(snap);});
+}
+function sortDialog(){
+  openDialog('<h3>Sort recipes</h3><div class="stack" style="margin-top:12px">'+SORTS.map(function(s){return '<button class="btn '+(S.sort===s[0]?'':'soft')+'" data-act="setSort" data-k="'+s[0]+'">'+s[1]+(S.sort===s[0]?' &#10003;':'')+'</button>';}).join('')+'</div>');
+}
+function backupDialog(){
+  var o=JSON.parse(JSON.stringify(S)); o.photos={};
+  openDialog('<h3>Backup and restore</h3><p>Copy this text somewhere safe (Notes works). To restore, paste a saved backup over it and tap Restore.</p><textarea id="bk" spellcheck="false">'+esc(JSON.stringify(o))+'</textarea><div class="stack"><button class="btn acc" data-act="copyBk">Copy backup</button><button class="btn" data-act="restoreBk">Restore from text</button><button class="btn soft" data-act="closeDialog">Close</button></div>');
+}
+
+/* ---------- navigation ---------- */
+function renderView(v){ ({browse:renderBrowse,plan:renderPlan,week:renderWeek,shop:renderShop,guide:renderGuide})[v](); }
+function refresh(){ renderView(view); renderBadge(); renderPill(); if(sheetOpen&&sheetKind==='recipe'&&curId) openRecipe(curId,true); }
+function go(v){
+  closeAll(); view=v;
+  $$('.view').forEach(function(x){x.classList.toggle('on',x.id==='v-'+v);});
+  $$('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.v===v);});
+  renderView(v); renderBadge(); renderPill(); window.scrollTo(0,0);
+}
+
+/* ---------- photo upload ---------- */
+var pendingPhoto=null;
+function onPhoto(e){
+  var f=e.target.files&&e.target.files[0]; e.target.value='';
+  if(!f||!pendingPhoto) return; var id=pendingPhoto;
+  var fr=new FileReader();
+  fr.onload=function(){
+    var img=new Image();
+    img.onload=function(){
+      var max=900, w=img.width, h=img.height, sc=Math.min(1,max/Math.max(w,h)); w=Math.round(w*sc); h=Math.round(h*sc);
+      var c=document.createElement('canvas'); c.width=w; c.height=h; c.getContext('2d').drawImage(img,0,0,w,h);
+      var prev=S.photos[id]; S.photos[id]=c.toDataURL('image/jpeg',0.72);
+      if(!save()){ if(prev) S.photos[id]=prev; else delete S.photos[id]; save(); toast('Storage is full. Remove a photo and try again.'); }
+      else toast('Photo saved');
+      refresh();
+    };
+    img.src=fr.result;
+  };
+  fr.readAsDataURL(f);
+}
+
+/* ---------- click handling ---------- */
+document.addEventListener('click',function(e){
+  var el=e.target.closest('[data-act]'); if(!el) return;
+  var a=el.dataset.act, d=el.dataset, id=d.id;
+  switch(a){
+    case 'tab': go(d.v); break;
+    case 'open': openRecipe(id); break;
+    case 'toggle': toggleWeek(id); break;
+    case 'loadEmbed': embedOn[id]=true; refresh(); break;
+    case 'watch': var u=linkFor(id); if(u) window.open(u,'_blank','noopener'); break;
+    case 'filter': filter=d.c; renderBrowse(); break;
+    case 'clearFilter': filter='All'; query=''; $('#q').value=''; renderBrowse(); break;
+    case 'sortMenu': sortDialog(); break;
+    case 'setSort': S.sort=d.k; save(); closeDialog(); renderBrowse(); break;
+    case 'closeSheet': closeSheet(); break;
+    case 'closeDialog': closeDialog(); break;
+    case 'sstep': var rr=BY_ID[curId]; if(S.week[curId]!=null){ S.week[curId]=Math.max(1,S.week[curId]+(+d.d)); save(); } else { draft[curId]=Math.max(1,(draft[curId]||rr.serves)+(+d.d)); } refresh(); break;
+    case 'wstep': S.week[id]=Math.max(1,S.week[id]+(+d.d)); save(); refresh(); break;
+    case 'match': S.week[id]=plannedPortions(id)||S.week[id]; save(); refresh(); break;
+    case 'pick': openPicker(d.day,d.slot); break;
+    case 'assign': assign(id); break;
+    case 'clearSlot': S.plan[d.day][d.slot]=blankSlot(); save(); if(d.close) closeSheet(); refresh(); break;
+    case 'wife': var sl=S.plan[d.day][d.slot]; sl.wife=!sl.wife; save(); refresh(); break;
+    case 'planMenu': openDialog('<h3>Plan options</h3><div class="stack" style="margin-top:12px"><button class="btn" data-act="fillDinners">Fill empty dinners from my picks</button><button class="btn soft" data-act="clearPlan">Clear all meals</button><button class="btn danger" data-act="newWeek">Start a new week</button><button class="btn soft" data-act="closeDialog">Cancel</button></div>'); break;
+    case 'fillDinners': fillDinners(); break;
+    case 'clearPlan': clearPlan(); break;
+    case 'newWeek': closeDialog(); newWeekDialog(); break;
+    case 'doNewWeek': doNewWeek(); break;
+    case 'tick': if(e.target.closest('.it-more')) break; if(S.checked[d.key]) delete S.checked[d.key]; else S.checked[d.key]=true; save(); var sy=window.scrollY; renderShop(); renderBadge(); window.scrollTo(0,sy); break;
+    case 'itemMenu': e.stopPropagation(); var nm=(buildShop().filter(function(x){return x.key===d.key;})[0]||{}).name||'Item';
+      openDialog('<h3>'+esc(nm)+'</h3><div class="stack" style="margin-top:12px"><button class="btn" data-act="have" data-key="'+esc(d.key)+'">I already have this at home</button><button class="btn soft" data-act="closeDialog">Cancel</button></div>'); break;
+    case 'have': S.have[d.key]=true; delete S.checked[d.key]; save(); closeDialog(); refresh(); toast('Moved to Already at home'); break;
+    case 'need': delete S.have[d.key]; save(); refresh(); break;
+    case 'toggleHave': showHave=!showHave; renderShop(); break;
+    case 'addManual': addManual(); break;
+    case 'tickManual': var mi=S.manual.filter(function(m){return m.id===id;})[0]; if(mi){ mi.done=!mi.done; save(); renderShop(); renderBadge(); } break;
+    case 'delManual': e.stopPropagation(); S.manual=S.manual.filter(function(m){return m.id!==id;}); save(); renderShop(); renderBadge(); break;
+    case 'shopMenu': openDialog('<h3>Shopping list</h3><div class="stack" style="margin-top:12px"><button class="btn" data-act="copyList">Copy what is left to buy</button>'+(navigator.share?'<button class="btn soft" data-act="shareList">Share list</button>':'')+'<button class="btn soft" data-act="untick">Untick everything</button><button class="btn danger" data-act="newWeek">Start a new week</button><button class="btn soft" data-act="closeDialog">Cancel</button></div>'); break;
+    case 'copyList': copyText(listText()).then(function(){toast('List copied');},function(){toast('Could not copy');}); closeDialog(); break;
+    case 'shareList': navigator.share({title:'Shopping list',text:listText()}).catch(function(){}); closeDialog(); break;
+    case 'untick': var s2=snapshot(); S.checked={}; S.manual.forEach(function(m){m.done=false;}); save(); closeDialog(); refresh(); toast('All ticks cleared',function(){restoreSnap(s2);}); break;
+    case 'photo': pendingPhoto=id; $('#photoIn').click(); break;
+    case 'rmPhoto': delete S.photos[id]; save(); refresh(); break;
+    case 'editLink': var cur=linkFor(id)||''; var v=window.prompt('Paste the Instagram (or any) link for this recipe. Leave blank to remove.',cur); if(v===null) break; v=v.trim(); if(v) S.links[id]=v; else delete S.links[id]; save(); refresh(); break;
+    case 'editRecipe': openEdit(id); break;
+    case 'saveEdit': saveEdit(); break;
+    case 'cancelEdit': openRecipe(curId); break;
+    case 'resetEdit': resetEdit(); break;
+    case 'backup': backupDialog(); break;
+    case 'copyBk': copyText($('#bk').value).then(function(){toast('Backup copied');},function(){toast('Select the text and copy it');}); break;
+    case 'restoreBk': try{ var o=JSON.parse($('#bk').value); if(!o||typeof o!=='object'||!o.week||!o.plan) throw new Error('bad'); var keepPhotos=S.photos; var s3=snapshot(); S=Object.assign(DEF(),o); S.photos=keepPhotos; ensure(); save(); closeDialog(); refresh(); toast('Backup restored',function(){restoreSnap(s3);}); }catch(err){ toast('That text is not a valid backup'); } break;
+    case 'undo': if(toast.undo){ var fn=toast.undo; toast.undo=null; var t=$('#toast .t'); if(t) t.classList.remove('on'); fn(); } break;
+  }
+});
+function addManual(){
+  var i=$('#addIn'); if(!i) return; var v=i.value.trim(); if(!v) return;
+  S.manual.push({id:'m'+Date.now(),name:v,done:false}); save(); renderShop(); renderBadge();
+  var n=$('#addIn'); if(n) n.focus();
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){ if(dialogOpen) closeDialog(); else if(sheetOpen) closeSheet(); }
+  if(e.key==='Enter'&&e.target&&e.target.id==='addIn'){ e.preventDefault(); addManual(); }
+});
+document.addEventListener('input',function(e){
+  var t=e.target;
+  if(t.id==='q'){ query=t.value; renderBrowse(); }
+  else if(t.id==='pq'&&pickCtx){ openPicker(pickCtx.day,pickCtx.which,t.value); }
+});
+window.addEventListener('pageshow',function(){ if(!sheetOpen&&!dialogOpen) document.documentElement.classList.remove('locked'); });
+
+/* ---------- boot ---------- */
+(function boot(){
+  load();
+  $('#shX').innerHTML=ic('down',22);
+  $('#siIcon').innerHTML=ic('search',20);
+  var tabs=[['browse','Recipes','grid'],['plan','Plan','cal'],['week','Week','list'],['shop','Shop','basket'],['guide','Guide','info']];
+  $('#tabbar').innerHTML=tabs.map(function(t){return '<button class="tab'+(t[0]==='browse'?' on':'')+'" id="tab-'+t[0]+'" data-act="tab" data-v="'+t[0]+'">'+ic(t[2],25)+'<span>'+t[1]+'</span></button>';}).join('');
+  $('#photoIn').addEventListener('change',onPhoto);
+  go('browse');
+})();
+})();
+</script>
+</body>
+</html>
